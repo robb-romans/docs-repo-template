@@ -9,6 +9,8 @@ When you add a fragment, add a note in this README describing its intended use.
 
 ----
 2014-07-17 added by Rose Coste
+
 *help-choose-region.xml*
+
 In each API DevGuide, xinclude this in the "Service/Access Endpoints" section to link to guidance about how to choose a region.
 ----
