@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tip>
+    <para>
+        Before deciding which regionalized endpoint to use,
+        read about 
+        special considerations for choosing a datacenter
+        at
+        <!-- 
+            2014-07-17 rose.coste
+            this link is a placeholder, pointing to an obsolete KC article; link to the *new* KC article before publication 
+        -->
+        <link xlink:href="http://www.rackspace.com/knowledge_center/article/what-is-ord-and-dfw">http://www.rackspace.com/knowledge_center/article/what-is-ord-and-dfw</link>.
+    </para>
+</tip>
