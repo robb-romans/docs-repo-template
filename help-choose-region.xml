@@ -1,9 +1,6 @@
 <tip>
     <para>
-        Before deciding which regionalized endpoint to use,
-        read about 
-        special considerations for choosing a datacenter
-        at
+        To help you decide which regionalized endpoint to use, read about special considerations for choosing a data center at 
         <!-- 
             2014-07-17 rose.coste
             this link is a placeholder, pointing to an obsolete KC article; link to the *new* KC article before publication 
