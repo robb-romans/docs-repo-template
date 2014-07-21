@@ -2,9 +2,10 @@
     <para>
         To help you decide which regionalized endpoint to use, read about special considerations for choosing a data center at 
         <!-- 
-            2014-07-17 rose.coste
-            this link is a placeholder, pointing to an obsolete KC article; link to the *new* KC article before publication 
-        -->
+            2014-07-21 rose.coste
+            David Hendler confirms this is the right KC article: 
+            at the same location, it has a new page title, "Where are the Rackspace data centers (DFW, LON, HKG, etc.)?"
         <link xlink:href="http://www.rackspace.com/knowledge_center/article/what-is-ord-and-dfw">http://www.rackspace.com/knowledge_center/article/what-is-ord-and-dfw</link>.
+        -->
     </para>
 </tip>
