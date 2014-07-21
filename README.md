@@ -12,6 +12,6 @@ When you add a fragment, add a note in this README describing its intended use.
 
 *help-choose-region.xml*
 
-In each API DevGuide, xinclude this in the "Service/Access Endpoints" section to link to guidance about how to choose a region.
+In each API DevGuide, xinclude this in the "Service/Access Endpoints" section to link to guidance about how to choose a region. Place it immediately before the table of available regionalized endpoints.
 
 ----
