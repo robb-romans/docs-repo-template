@@ -47,6 +47,6 @@ The files that are most likely to be of interest to you are as follows:
 * [src/resources/clb-devguide.xml](src/resources/clb-devguide.xml)
 * [src/resources/wadl/rax-cloudLoadBalancers-api-v1.wadl](src/resources/wadl/rax-cloudLoadBalancers-api-v1.wadl)
 
-If you want to make changes to the example files referenced in the WADL file, you can find the example files at  [src/resources/samples](src/resources/samples)
+If you want to make changes to the example files referenced in the WADL file, you can find the example files at  [src/resources/samples](src/resources/samples).
 
 The status codes referenced by the WADL files are at [src/resources/wadl/common.ent](src/resources/wadl/common.ent).
