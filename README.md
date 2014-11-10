@@ -8,6 +8,17 @@ This repo contains non-product-specific doc source for fragments to be included 
 When you add a fragment, add a note in this README describing its intended use.
 Add the most recent note to the top of the list.
 
+
+----
+2014-11-10 added by Cat Lookabaugh
+
+Moved RBAC fragments from shareddocs repo. 
+Chose section_RBAC_2roles or section_RBAC_3roles depending on which roles your product has (admin and observer 
+    OR admin, observer and creator).
+Replace all "cloudproductabbrev" occurrences with your product name role abbreviation (ie: "cn")
+Replace all "cloudproduct" occurrences with your product name (ie: "Cloud Networks").
+You can tailor the matrix link in section 1.4 to point to your specific product rather than the high level matrix page.
+
 ----
 2014-11-05 added by Rose Coste
 
