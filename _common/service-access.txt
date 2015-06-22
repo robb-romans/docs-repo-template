@@ -1,4 +1,4 @@
-.. _clb-dg-api-info-service-access:
+.. _devguide-common-service-access-endpoints:
 
 ============================
 Service access and endpoints

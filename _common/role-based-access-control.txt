@@ -1,4 +1,4 @@
-.. _clb-dg-api-info-rbac:
+.. _devguide-common-rbac:
 
 ================================
 Role-based access control (RBAC)
