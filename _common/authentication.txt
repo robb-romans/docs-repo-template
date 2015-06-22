@@ -1,53 +1,64 @@
-.. _clb-dg-apiinfo-auth:
+.. _common-dg-auth:
 
-==============
+
 Authentication
-==============
+~~~~~~~~~~~~~~
 
-Every ReST request against the Load Balancers Service requires the inclusion of a specific authorization token, supplied by the `X-Auth-Token` HTTP header. Customers obtain this token by first using the Rackspace Cloud Authentication Service and supplying valid authentication credentials.
+Every ReST request against a Rackspace Cloud service requires the inclusion of a specific authorization token, supplied by the `X-Auth-Token` HTTP header. Customers obtain this token by first using the Rackspace Cloud Identity service and supplying valid authentication credentials.
 
-.. _clb-dg-apiinfo-auth-endpoints:
+.. _common-dg-auth-endpoint:
 
-Geographic endpoints
-~~~~~~~~~~~~~~~~~~~~
+Authentication endpoint
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The Rackspace Cloud Authentication Service serves as the entry point to all Rackspace Cloud APIs and is itself a ReSTful web service.
 
-Use the following endpoint to access the Authentication Service, regardless of US or UK identities:
+Use the following endpoint to access the Cloud Identity service:
 
-`https://identity.api.rackspacecloud.com/v2.0/`
+``https://identity.api.rackspacecloud.com/v2.0/``
 
-Your account may be based in either the US or the UK; this is not determined by your physical location but by the location of the Rackspace retail site which was used to create your account:
+Note that the v2.0 component in the URL indicates that you are using version 2.0 of the Cloud Authentication API.
 
--  If your account was created via http://www.rackspacecloud.com, it is a US-based account.
+.. _common-dg-auth-token:
 
--  If your account was created via http://www.rackspace.co.uk, it is a UK-based account.
+Authenticating by using token-based authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Before you can make Rackspace Cloud API requests, you must
+first generate an authentication token. You provide this
+token in the ``X-Auth-Token`` header in each Rackspace Cloud API request.
 
-.. _clb-dg-apiinfo-auth-authenticate:
+The examples below demonstrate how to use cURL to obtain the
+authentication token and your account number. You must provide both when
+making subsequent API requests.
 
-Authenticate
-~~~~~~~~~~~~
+Remember to replace the placeholder names in the following
+authentication request examples with your information:
 
-+----------+-------------+------------------------------------------+
-| **POST** | v2.0/tokens | Authenticate to receive a token and a    |
-|          |             | service catalog.                         |
-+----------+-------------+------------------------------------------+
+-  *yourUserName* — Your common Rackspace Cloud username, as supplied
+   during registration.
 
-Normal Response Code(s): 200, 203
+-  *yourApiKey* — Your API access key.
 
-Error Response Code(s): unauthorized (401), userDisabled (403), badRequest (400), authFault (500), serviceUnavailable (503)
+   You can obtain the key from the Rackspace `Cloud Control Panel`_ by selecting
+   **Account Settings** from the *yourAccount* menu in the top-right
+   corner of the window.
 
-The authenticate operation provides clients with an authentication token and a list of regional cloud endpoints. The sample requests and responses in this section illustrate a general case. In your authentication request, use your own credentials rather than the sample values shown here for `username` and `apiKey`. When you authenticate successfully, the response to your authentication request includes a catalog of the services to which you have subscribed rather than the sample values shown here.
+In the following examples, you submit the request against the Rackspace Cloud Identity
+service endpoint. If the request is successful, the authentication response returns the authentication token, service catalog, and user information as shown in the example :ref:`authentication response <common-dg-auth-response>`. You can use this information to :ref:`submit an API request <common-dg-auth-submit-api-request>`.
 
-.. note::
-    If you authenticate with username and password credentials, you can set up multi-factor authentication to add an additional level of security to your account. This feature is not available for username and API key credentials. For information about setting up and using multi-factor authentication, see `Multi-factor authentication`_ in the *Cloud Identity Client Developer Guide*.
+.. _common-dg-auth-request:
 
-    For information about other authentication methods with examples, see `authentication tokens`_ in the *Cloud Identity Client Developer Guide*.
+**Example: Authentication request, JSON**
 
-.. _Multi-factor authentication: http://docs.rackspace.com/auth/api/v2.0/auth-client-devguide/content/MFA_Ops.html
-.. _authentication tokens: http://docs.rackspace.com/auth/api/v2.0/auth-client-devguide/content/Token_Calls.html
+.. code::  
 
-**Example: Authentication with US endpoint: XML request**
+    curl -s https://identity.api.rackspacecloud.com/v2.0/tokens -X 'POST' \
+         -d '{"auth":{"RAX-KSKEY:apiKeyCredentials":{"username":"yourUserName",
+            "apiKey":"yourApiKey"}}}' \ 
+         -H "Content-Type:
+            application/json" 
+
+**Example: Authentication request, XML**
 
 .. code::
 
@@ -66,37 +77,93 @@ The authenticate operation provides clients with an authentication token and a l
            apiKey="aaaaa-bbbbb-ccccc-12345678"/> **<2>**
     </auth>
 
-    .. _clb-dg-apiinfo-example2:
+.. _common-dg-auth-response:
 
-**Example: Authentication with US endpoint: JSON request**
+**Example: Authentication response, JSON**
 
 .. code::
 
-    POST /v2.0/tokens HTTP/1.1
-    User-Agent: curl/7.21.0 (x86_64-pc-linux-gnu) libcurl/7.21.0 OpenSSL/0.9.8o zlib/1.2.3.4 libidn/1.15 libssh2/1.2.6
-    Host: identity.api.rackspacecloud.com
-    Accept: application/json
-    Content-Type: application/json
-    Content-Length: 54
-
     {
-       "auth":
-       {
-          "RAX-KSKEY:apiKeyCredentials":
-          {
-             "username": "jsmith", **<1>**
-             "apiKey": "aaaaa-bbbbb-ccccc-12345678" **<2>**
-          }
-       }
+        "access": {
+            "serviceCatalog": [
+                {
+                    "endpoints": [
+                        {
+                            "internalURL": "https://snet-storage101.dfw1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7", 
+                            "publicURL": "https://storage101.dfw1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7", 
+                            "region": "DFW", 
+                            "tenantId": "MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7"
+                        }, 
+                        {
+                            "internalURL": "https://snet-storage101.ord1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7", 
+                            "publicURL": "https://storage101.ord1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7", 
+                            "region": "ORD", 
+                            "tenantId": "MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7"
+                        }
+                    ], 
+                    "name": "cloudFiles", 
+                    "type": "object-store"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "publicURL": "https://servers.api.rackspacecloud.com/v1.0/010101", 
+                            "tenantId": "010101", 
+                            "versionId": "1.0", 
+                            "versionInfo": "https://servers.api.rackspacecloud.com/v1.0", 
+                            "versionList": "https://servers.api.rackspacecloud.com/"
+                        }
+                    ], 
+                    "name": "cloudServers", 
+                    "type": "compute"
+                }, 
+                {
+                    "endpoints": [ 
+                        {
+                            "publicURL": "https://dfw.servers.api.rackspacecloud.com/v2/010101", 
+                            "region": "DFW", 
+                            "tenantId": "010101", 
+                            "versionId": "2", 
+                            "versionInfo": "https://dfw.servers.api.rackspacecloud.com/v2", 
+                            "versionList": "https://dfw.servers.api.rackspacecloud.com/"
+                        }, 
+                        {
+                            "publicURL": "https://ord.servers.api.rackspacecloud.com/v2/010101", 
+                            "region": "ORD", 
+                            "tenantId": "010101", 
+                            "versionId": "2", 
+                            "versionInfo": "https://ord.servers.api.rackspacecloud.com/v2", 
+                            "versionList": "https://ord.servers.api.rackspacecloud.com/"
+                        }
+                    ], 
+                    "name": "cloudServersOpenStack", 
+                    "type": "compute"
+                }
+            ], 
+            "token": {
+                "expires": "2012-09-14T15:11:57.585-05:00", 
+                "id": "858fb4c2-bf15-4dac-917d-8ec750ae9baa", 
+                "tenant": {
+                    "id": "010101", 
+                    "name": "010101"
+                }
+            }, 
+            "user": {
+                "RAX-AUTH:defaultRegion": "DFW", 
+                "id": "170454", 
+                "name": "MyRackspaceAcct", 
+                "roles": [
+                    {
+                        "description": "User Admin Role.", 
+                        "id": "3", 
+                        "name": "identity:user-admin"
+                    }
+                ]
+            }
+        }
     }
 
-The username supplied here is your common Rackspace Cloud username.
-
-The key is your API access key. The key can be obtained from the Rackspace `Cloud Control Panel`_ in the <Your Account> / API Access section.
-
-.. _Cloud Control Panel: http://mycloud.rackspace.com/
-
-**Example: Authentication with US endpoint: XML response**
+**Example: Authentication response, XML**
 
 .. code::
 
@@ -175,199 +242,143 @@ The key is your API access key. The key can be obtained from the Rackspace `Clou
       </serviceCatalog>
     </access>
 
-**Example: Authentication with US endpoint: JSON response**
-
-.. code::
-
-    HTTP/1.1 200 OK
-    Content-Type: application/json; charset=UTF-8
-    Content-Length: 477
-    Date: Thu, 12 Apr 2012 18:45:13 GMT
-
-    {
-        "access": {
-         
-            "token": {
-                "expires": "2011-12-08T22:51:02.000-06:00", 
-                "id": "vvvvvvvv-wwww-xxxx-yyyy-zzzzzzzzzzzz"
-            }, 
-            "user": {
-                "id": "123456", 
-                "name": "jsmith",
-                "RAX-AUTH:defaultRegion": "DFW",
-                "roles": [
-                    {
-                        "description": "Admin Role.", 
-                        "id": "identity:admin", 
-                        "name": "identity:admin"
-                    }, 
-                    {
-                        "description": "Default Role.", 
-                        "id": "identity:default", 
-                        "name": "identity:default"
-                    }
-                ]
-            },
-            "serviceCatalog": [
-                {
-                    "endpoints": [
-                        {
-                            "publicURL": "https://dfw.databases.api.rackspacecloud.com/v1.0/1100111", 
-                            "region": "DFW", 
-                            "tenantId": "1100111"
-                        }, 
-                        {
-                            "publicURL": "https://ord.databases.api.rackspacecloud.com/v1.0/1100111", 
-                            "region": "ORD", 
-                            "tenantId": "1100111"
-                        }
-                    ], 
-                    "name": "cloudDatabases", 
-                    "type": "rax:database"
-                },
-                {
-                    "endpoints": [
-                        {
-                            "publicURL": "https://dfw.loadbalancers.api.rackspacecloud.com/v1.0/1100111", 
-                            "region": "DFW", 
-                            "tenantId": "1100111"
-                        }, 
-                        {
-                            "publicURL": "https://ord.loadbalancers.api.rackspacecloud.com/v1.0/1100111", 
-                            "region": "ORD", 
-                            "tenantId": "1100111"
-                        }
-                    ], 
-                    "name": "cloudLoadBalancers", 
-                    "type": "rax:load-balancer"
-                }, 
-                {
-                    "endpoints": [
-                        {
-                            "tenantId": "1100111",
-                            "region": "DFW",
-                            "publicURL": "https://dfw.servers.api.rackspacecloud.com/v2/1100111", 
-                            "versionId": "2", 
-                            "versionInfo": "https://dfw.servers.api.rackspacecloud.com/v2/", 
-                            "versionList": "https://dfw.servers.api.rackspacecloud.com/"
-                        },
-                        {
-                            "tenantId": "1100111",
-                            "region": "ORD",
-                            "publicURL": "https://ord.servers.api.rackspacecloud.com/v2/1100111", 
-                            "versionId": "2", 
-                            "versionInfo": "https://ord.servers.api.rackspacecloud.com/v2/", 
-                            "versionList": "https://ord.servers.api.rackspacecloud.com/"
-                        }
-                    ],
-                    "name": "cloudServersOpenStack", 
-                    "type": "compute"
-                },
-                {
-                    "endpoints": [
-                        {
-                            "tenantId": "1100111", 
-                            "publicURL": "https://servers.api.rackspacecloud.com/v1.0/1100111", 
-                            "versionId": "1.0", 
-                            "versionInfo": "https://servers.api.rackspacecloud.com/v1.0/", 
-                            "versionList": "https://servers.api.rackspacecloud.com/"
-                        }
-                    ],
-                    "name": "cloudServers", 
-                    "type": "compute"
-                }, 
-                {
-                    "endpoints": [
-                        {
-                            "tenantId": "MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee",
-                            "publicURL": "https://storage101.dfw1.clouddrive.com/v1/MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "internalURL": "https://snet-storage101.dfw1.clouddrive.com/v1/MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "region": "DFW" 
-                        },
-                        {
-                            "tenantId": "MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee",
-                            "publicURL": "https://storage101.ord1.clouddrive.com/v1/MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "internalURL": "https://snet-storage101.ord1.clouddrive.com/v1/MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "region": "ORD" 
-                        }
-                    ], 
-                    "name": "cloudFiles", 
-                    "type": "object-store"
-                }, 
-                {
-                    "endpoints": [  
-                        {
-                            "tenantId": "MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "publicURL": "https://cdn1.clouddrive.com/v1/MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "region": "DFW"
-                        },                
-                        {
-                            "tenantId": "MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "publicURL": "https://cdn2.clouddrive.com/v1/MossoCloudFS_aaaaaaaa-bbbb-cccc-dddd-eeeeeeee", 
-                            "region": "ORD"
-                        }
-                    ],
-                    "name": "cloudFilesCDN", 
-                    "type": "rax:object-cdn"
-                }, 
-                {
-                    "endpoints": [
-                        {
-                            "tenantId": "1100111",
-                            "publicURL": "https://dns.api.rackspacecloud.com/v1.0/1100111"
-                        }
-                    ],
-                    "name": "cloudDNS", 
-                    "type": "rax:dns"
-                }
-            ]
-        }
-    }
-
 .. note::
-  The information shown in the Auth Response examples is for US-based accounts. If you authenticate using a UK-based account, you see the service catalog information for UK-based accounts.
+    For detailed information about the authentication request and response, see  
+    `authentication request and response`_ in the *Cloud Identity Developer Guide*.
 
-In XML responses only, a list of namespaces identifies API extensions that add functionality to the core API.
+.. _Cloud Control Panel: http://mycloud.rackspace.com/
+.. _authentication request and response: http://docs.rackspace.com/auth/api/v2.0/auth-client-devguide/content/Sample_Request_Response-d1e64.html
 
-This token can be presented to a service as evidence of authentication. Tokens are valid for a finite duration; a token's default lifespan is twenty-four hours.
+.. _common-dg-auth-submit-api-request:
 
-The expires attribute denotes the time after which the token automatically becomes invalid. A token may be manually revoked before the time identified by the expires attribute; expires predicts a token's maximum possible lifespan but does not guarantee that it reaches that lifespan. Clients are encouraged to cache a token until it expires.
+Submit API request
+^^^^^^^^^^^^^^^^^^
 
-.. note::
-    The token's expiration time is formatted differently in the US and UK. These response examples show the US format.
+After you authenticate successfully, you can submit
+an API request for any service included in the service catalog.
 
-Users can be assigned a default region so that, when there is a choice between multiple endpoints associated with a service in the user's catalog, the endpoint for the user's default region is selected if it is available. In this example, the user's default region is DFW and several of the services in the user's catalog offer endpoints in that region and the ORD region; this user's work is directed to the DFW region whenever possible.
+#. In the authentication response, copy the token ``id`` value from the
+   token object and save it, or export it to an environment variable
+   that can be supplied in the ``X-Auth-Token`` header required in each
+   API request. In this example, the token value is
+   ``123abc5368901230076b12357897898``.
 
-Users can be assigned multiple roles, with each role providing specific privileges. In this example, jsmith is the administrative user for the account, holding the fully-privileged identity:admin role. Other users might hold other roles with different privileges. Roles need not be associated with actual job functions such as Administrator, Operator, Developer, Tester, or Trainer.
+   .. code::
 
-The service catalog lists the services this user can access. In this example, the user can access one database service, one load balancing service, two compute services (Cloud Servers OpenStack and Cloud Servers), two object storage services (Cloud Files Content Distribution Network (CDN), and Cloud Files), and one DNS service. The catalog listing for each service provides at least one endpoint URL for that service. Other information, such as regions, versions, and tenants, is provided if it's relevant to this user's access to this service.
+       "token": 
+             {
+               "RAX-AUTH:authenticatedBy": [
+                   "APIKEY"
+                       ],
+               "expires": "2015-01-09T15:08:53.645-06:00",
+               "id": "123abc5368901230076b12357897898"
+             }
 
-The service type attribute identifies services that perform similar functions, whatever those services might be named. In this example, the services named cloudServers and cloudServersOpenStack are both identified as type="compute", identifying them as compute services even though the word "compute" does not appear in their names.
+#. Find the endpoint URL for the service that you want to access.
 
-.. note::
-  Use service type as the primary value for locating a service. If multiple endpoints of the same service type exist in the same region, use service name as the tiebreaker.
+   For example, the endpoint URL for Cloud Files is
+   ``https://storage101.ord1.clouddrive.com/v1/yourTenantID``.
 
-The service name attribute identifies each unique service in the catalog. Once a service is created, its name does not change. However, new services of the same service type may be added to the catalog with new names.
+#. Submit an API request to the service endpoint that you identified.
 
-.. note::
-  If you are programmatically parsing an authentication response, use service type rather than service name as the basis for determining whether a user has access to a particular kind of service. Service type is stable across all releases; new service types may be developed, but existing service types are not renamed. In this example, type="compute" identifies all the available compute services, one of which is named cloudServers and one of which is named cloudServersOpenStack. New compute service names may be added in future releases; whatever the compute services are named, you can always recognize them by parsing for type="compute" in the authentication response's service catalog.
+   The following example shows a cURL request to retrieve a list of
+   containers for a tenant by using the Cloud Files API.
 
-A service may expose endpoints in different regions. Regional endpoints allow clients to provision resources in a manner that provides high availability.
+   .. code::  
 
-Some services are not region-specific. These services supply a single non-regional endpoint and do not provide access to internal URLs.
+       $ cURL -i -s \
+       -X GET https://storage101.ord1.clouddrive.com/v1/MossoCloudFS_9c24e3db-52bf-4f26-8dc1-220871796e9f \
+       -H "X-Auth-Token: $AUTH_TOKEN" \
+       -H "Content-type: application/json"  --verbose | python -m json.tool
 
-Some services recognize specification of a tenant. If a service does recognize tenants, the format of the tenant specification is defined only by the service; for details about whether and how to specify a tenant, check the documentation for the service you are using.
+   If the authentication token is accepted, the Cloud Files service
+   returns the following response if the authentication token is
+   accepted.
 
-An endpoint can be assigned public and internal URLs. A public URL is accessible from anywhere. Access to a public URL usually incurs traffic charges. Internal URLs are only accessible to services within the same region. Access to an internal URL is free of charge.
+   .. code:: 
+                       
+        GET /v1/MossoCloudFS_9c24e3db-52bf-4f26-8dc1-220871796e9f HTTP/1.1
+        User-Agent: curl/7.30.0
+        Host: storage101.ord1.clouddrive.com
+        Accept: */*
+        X-Auth-Token: 69dc089d983f4729af29bec5a7dc6426
+        Content-type: application/json
+        
+         HTTP/1.1 200 OK 
+         Content-Length: 22
+         X-Account-Object-Count: 0
+         X-Account-Storage-Policy-Policy-0-Bytes-Used: 0
+         X-Timestamp: 1345588196.72805
+         X-Account-Storage-Policy-Policy-0-Object-Count: 0
+         X-Account-Meta-Temp-Url-Key: e1f97840118eafc550d45dbd8e530c11
+         X-Account-Bytes-Used: 0
+         X-Account-Container-Count: 3
+         Content-Type: text/plain; charset=utf-8
+         Accept-Ranges: bytes
+         X-Trans-Id: tx1353de66dd9d49da84eda-00544799f4ord1
+         Date: Wed, 15 June 2015 11:50:12 GMT
+                           
+         metest
+         mytest
+         mytest2
+         * Connection #0 to host storage101.ord1.clouddrive.com left intact
 
-Authentication tokens are typically valid for 24 hours. Applications should be designed to re-authenticate after receiving a 401 (Unauthorized) response from a service endpoint.
+.. _common-dg-auth-manage:
 
-.. note::
-   If you are programmatically parsing an authentication response, please be aware that service names are stable for the life of the particular service and can be used as keys. You should also be aware that a user's service catalog can include multiple uniquely-named services which perform similar functions. For example, cloudServersOpenStack is the OpenStack version of compute whereas cloudServers is the legacy version of compute; the same user can have access to both services. In Auth 2.0, the service type attribute can be used as a key by which to recognize similar services; see the tip below.
+Manage authentication tokens
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-  Beginning with Auth 2.0, the service catalog includes a service type attribute to identify services that perform similar functions but have different names; for example, `type="compute"` identifies compute services such as cloudServers and cloudServersOpenStack. Some developers have found the service type attribute to be useful in parsing the service catalog. For additional information on Auth 2.0 (also known as the Cloud Identity Service), refer to the `Cloud Identity Client Developer Guide`_.
+Authentication tokens are valid for 24 hours by default. The expiration
+time stamp is included in the token object returned in the
+authentication response. Administrators and users can invalidate a token
+immediately by submitting a **Revoke token** API request to the Identity
+service endpoint.
 
-Load balancer service endpoints are published in the service catalog in the Auth response with the account number, which is a required element of the service endpoints. The examples shown here are for authentication for US customers. Customers with UK-based accounts see different values in the service catalog. See the next section for more information about service endpoints.
+If you re-authenticate before the ``token`` expires, the Identity
+service returns the same token as long as it remains valid.
 
-.. _Cloud Identity Client Developer Guide: http://docs.rackspace.com
+When a token expires or becomes invalid, any API request submitted
+against Rackspace Cloud services returns a 401 error message. To regain
+access, submit another **POST tokens** request to the authentication
+endpoint.
+
+**Best practices**
+
+-  Cache authentication tokens.
+
+   By default, the Rackspace Cloud Identity service makes an
+   authentication request before every API call.
+
+   To speed up your API operations and reduce system load, store the
+   authentication token in a secure cache or database so that the
+   API can use the stored information, instead of having to
+   re-authenticate for each API request. You can re-use the cached
+   token value as long as it remains valid.
+
+-  Design applications to re-authenticate after receiving a
+   `401 Unauthorized` response from a service endpoint, or use
+   either of the following methods to get a new token before the
+   existing token expires.
+
+-  Submit a **POST tokens** request within an hour of the token
+   expiration to obtain a new token. Note that this behavior is a
+   Rackspace customization of the OpenStack Identity (keystone)
+   implementation.
+
+-  Submit a **DELETE token** request to revoke the existing
+   token, and then followed by a **POST tokens** request to get a new token.
+
+-  To simplify authentication, credential, and token management, use an 
+   `OpenStack command-line client application`_ or one of the `Rackspace SDKs`_.
+
+.. note:
+    - For more detailed authentication instructions, see the `Identity service quickstart`_.
+
+    - The Rackspace Cloud Identity service supports additional authentication methods like 
+      username and password, and multi-factor authentication. For more information, see
+      `Rackspace Cloud Identity service Developer Guide`_.
+
+.. _OpenStack command-line client application: https://wiki.openstack.org/wiki/OpenStackClients
+.. _Rackspace SDKs: https://developer.rackspace.com/sdks/
+.. _Identity service quickstart: http://docs.rackspace.com/auth/api/v2.0/auth-client-devguide/content/QuickStart-000.html
+.. _Rackspace Cloud Identity service Developer: http://docs.rackspace.com/auth/api/v2.0/auth-client-devguide/content/Token_Calls.html
