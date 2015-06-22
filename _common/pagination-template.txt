@@ -40,4 +40,4 @@ For example, the following request returns up to 100 pages and starts with the i
 
 For convenience, list responses contain ``next`` links and ``previous`` links. The first page in the list will not contain a "previous" link; similarly, the last page in the list will not contain a "next" link.
 
-..include: <product-specific-pagination-operations>.txt
+.. include: <product-specific-pagination-operations>.txt
