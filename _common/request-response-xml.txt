@@ -1,4 +1,4 @@
-.. _devguide-common-response-request-xml:
+.. _common-dg-response-request-xml:
 
 ==========================
 Response and Request Types

@@ -1,4 +1,4 @@
-.. _devguide-common-request-response-json:
+.. _common-dg-request-response-json:
 
 ==========================
 Response and Request Types
