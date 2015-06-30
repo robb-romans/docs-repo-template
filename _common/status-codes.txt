@@ -365,10 +365,10 @@ error
    Inclusion: Detail only
 
 ..  note::
-    Note that an asynchronous operation, if it fails, may not give the user an error,
+    Note that an asynchronous operation, if it fails, might not give the user an error,
     and the operation can error out without a failure notification.
 
-The asynchronous response body will look similar to the following
+The asynchronous response body will look like the following
 examples, depending on whether basic or detailed information is
 requested.
 
