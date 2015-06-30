@@ -257,8 +257,7 @@ descriptions:
 
 .. _common-dg-status-five-example:
 
-The following ``instanceFault`` examples show errors when the server has
-erred or cannot perform the requested operation.
+The following ``instanceFault`` examples show the response header and body information returned when the server cannot perform the requested operation due to an error.
 
 **Example: instanceFault response, XML**
 
