@@ -1,0 +1,20 @@
+Resolve conflicts between RBAC multiproduct versus custom (product-specific) roles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The account owner can set roles for both multiproduct and Cloud Load Balancers scope, and it is important to understand how any potential conflicts among these roles are resolved. When two roles appear to conflict, the role that provides the more extensive permissions takes precedence. Therefore, admin roles take precedence over observer and creator roles, because admin roles provide more permissions.
+
+The following table shows two examples of how potential conflicts between user roles in the Control Panel are resolved:
+
++----------------------------------------+-------------------------------------+--------------------------------------+
+|        Permission configuration        |         View of Permission          |         Can the User Perform         |
+|                                        |         in the Control Panel        |        Product Admin Functions       |
+|                                        |                                     |         in the Control Panel?        |
++========================================+=====================================+======================================+
+| User is assigned the following roles:  | Appears that the user has only the  | Yes, for Cloud Load Balancers only.  |
+| multiproduct **observer** and          | multiproduct **observer** role      | The user has the **observer** role   |
+| Cloud Load Balancers **admin**         |                                     | for the rest of the products.        |
++----------------------------------------+-------------------------------------+--------------------------------------+
+| User is assigned the following roles:  | Appears that the user has only the  | Yes, for all of the products.        |
+| multiproduct **admin** and             | multiproduct **admin** role         | The Cloud Load Balancers             |
+| Cloud Load Balancers **observer**      |                                     | **observer** role is ignored.        |
++----------------------------------------+-------------------------------------+--------------------------------------+
