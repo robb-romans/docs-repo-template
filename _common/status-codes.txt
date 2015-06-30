@@ -4,7 +4,7 @@ Status codes
 ~~~~~~~~~~~~
 
 When you send an API request to a Rackspace Cloud service, the service returns an
-object containing an HTTP status code the denotes the response. The response body
+object containing an HTTP status code that denotes the response. The response body
 returns additional information about the status code.
 
 HTTP status codes come in different classes. Classes are determined by the first
