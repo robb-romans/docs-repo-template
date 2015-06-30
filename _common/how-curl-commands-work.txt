@@ -12,7 +12,7 @@ Mac OS X, and Windows. For information about cURL, see http://curl.haxx.se/.
 To run the cURL request examples shown in this guide, copy each example from the HTML version 
 of this guide directly to the command line or a script.
 
-.. _cn-dg-generalapi-curl-json:
+.. _common-dg-generalapi-curl-json:
 
 The following command is an example cURL command that provisions a server with an isolated 
 network using JSON.

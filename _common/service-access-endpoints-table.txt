@@ -1,5 +1,7 @@
 .. cs-dg-service-access-endpoints-table
 
+.. comments -- For use with  service-access.txt.  Replace endpoints with your product's endpoints.
+
 +-------------------------------+-----------------------------------------------------------------------------+
 | **Chicago (ORD)**             | https://ord.servers.api.rackspacecloud.com/v1.0/v1.0/{tenantID}/            |
 |                               |                                                                             |
