@@ -318,9 +318,7 @@ retrieving existing information.
 user is being built or an instance is executing an action.
 
 **PUT**, **POST**, and **DELETE** requests return *asynchronous* responses. These
-responses take some time to process. Therefore an *asynchronous* response return
-``202 Accepted`` responses containing information with a callback URL, which allows the progress,
-status, and/or response information of the call to be retrieved at a later point in time.
+responses take some time to process. Because these responses require additional processing time, the server returns a 202 Accepted response that contains information with a call back URI that allows the status or respone information for the call to be retrieved at a later point in time.
 
 When an asynchronous request returns an error, the system places the instance, database,
 or user in an ERROR state and embeds the fault in the offending instance, database, or user.
