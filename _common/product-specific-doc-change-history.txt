@@ -1,4 +1,0 @@
-.. Add updates using third-level subheadings. Do not use tables.
-
-21 June 2015
-------------
