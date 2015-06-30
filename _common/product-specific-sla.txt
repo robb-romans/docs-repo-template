@@ -1,8 +1,0 @@
-.. Replace $productName with the product name. Update the SLA link with the product-specific URL.
-
-$productName is part of the Rackspace Cloud. The `cost for API usage`_ follows the pricing for Cloud Servers. 
-
-$productName has its own `service level agreement`_ (SLA).
-
-.. _Billing for API usage: http://www.rackspace.com/cloud/servers/pricing/
-.. _service level agreement: http://www.rackspace.com/cloud/servers/service-levels/
