@@ -1,0 +1,8 @@
+.. Replace $productName with the product name and update links accordingly. Add or replace resources as needed.
+
+- $productName API `quickstart guide`_
+
+- $productName API `getting started guide`_
+
+.. _quickstart guide: https://developer.rackspace.com/docs/cloud-load-balancers/getting-started/
+.. _getting started guide: http://docs.rackspace.com/loadbalancers/api/v1.0/clb-getting-started/content/LB_Overview.html
