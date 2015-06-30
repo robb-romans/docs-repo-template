@@ -1,4 +1,4 @@
-.. cs-dg-service-access-endpoints-table
+.. service-access-endpoints-table
 
 .. comments -- For use with  service-access.txt.  Replace endpoints with your product's endpoints.
 
