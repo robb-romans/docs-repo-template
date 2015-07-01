@@ -15,12 +15,11 @@ digit of the status code:
  - 5xx (Server error)
 
 .. note::
-   HTTP status codes are not standard across all Rackspace Cloud services.
-   The same code could have multiple response types. Read the response body
-   carefully to accurately determine the nature of the response.
-
-.. note::
-   For a more comprehensive list of HTTP status codes, refer to `RFC-7231`_.
+   -HTTP status codes are not standard across all Rackspace Cloud services.
+    The same code could have multiple response types. Read the response body
+    carefully to accurately determine the nature of the response.
+   
+   -For a more comprehensive list of HTTP status codes, refer to `RFC-7231`_.
 
 .. _RFC-7231: http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
 
