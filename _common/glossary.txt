@@ -1,40 +1,1143 @@
-.. _clb-dg-glossary:
-
 ========
 Glossary
 ========
 
-Connection logging
-~~~~~~~~~~~~~~~~~~
+.. glossary::
+   :sorted:
 
-The connection logging feature allows logs to be delivered to a Cloud Files account every hour. For HTTP-based protocol traffic, these are Apache-style access logs. For all other traffic, this is connection and transfer logging.
+   ABNF
+      The Augmented BNF (ABNF) format is a plain-text (non-XML) representation,
+      which is similar to a traditional BNF (Backus-Naur Form) grammar,
+      and is used as a bidirectional communications protocol.
 
-Error page
-~~~~~~~~~~
+   account
+      The portion of the Cloud Files system designated for your use.
+      The Cloud Files system is designed to be used by many
+      different customers, and your user account is your portion of it.
+      Your user account is your slice of the Cloud Files system.
+      You must identify yourself with a valid user name and your
+      API access key. After you are authenticated, your have
+      full read/write access to the objects (files) stored under your account.
 
-An error page is the html file that is shown to the end user when an error in the service has been thrown. By default every virtual server is provided with the default error file. It is also possible to submit a custom error page via the Load Balancers API.
+   agent
+      An executable that sits on your cloud server
+      that knows how to perform backups and restores.
+      The agent gathers metrics based on agent checks and
+      pushes them to Cloud Monitoring and provides insight into
+      your servers with checks for information such as load average
+      and network usage. The agent acts as a single small
+      service that runs scheduled checks and pushes metrics to
+      the rest of Cloud Monitoring so the metrics can be analyzed,
+      trigger alerts, and be archived. These metrics are
+      gathered via checks using agent check types, and can be
+      used with the other Cloud Monitoring primitives such as alarms.
+      Agent installation currently supports Windows and Unix or Linux platforms.
 
-Health monitor
-~~~~~~~~~~~~~~
+   agent token
+      An authentication token used to identify the agent
+      when it communicates with Cloud Monitoring.
 
-A health monitor is a configurable feature of each load balancer. It is used to determine whether or not a back-end node is usable for processing a request. The load balancing service currently supports active health monitoring.
+   alarm
+      Contains a set of rules that determine when
+      the monitoring system sends a notification.
+      You can create multiple alarms for the different check types
+      associated with an entity. For example, if your entity
+      is a web server that hosts your company's website, you can
+      create one alarm to monitor the server itself,
+      and another alarm to monitor the website. The alarms
+      language provides you with scoping parameters that let
+      you pinpoint the value that will trigger the alarm.
+      The scoping parameters are inherently flexible,
+      so that you can set up multiple checks to trigger a single alarm.
+      The alarm language supplies an adaptable triggering
+      system that makes it easy for you to define different
+      formulas for each alarm that monitors an entity's uptime.
 
-Load balancer
-~~~~~~~~~~~~~
+   API
+      Application Program Interface. A set of routines,
+      protocols, and tools for building software applications.
 
-A load balancer is a logical device which belongs to a cloud account. It is used to distribute workloads between multiple back-end systems or services, based on the criteria defined as part of its configuration.
+   Apache
+      The most common web server software presently being used on the internet.
 
-Node
-~~~~
+   Applet
+      A Java program that can be embedded into a web page.
 
-A node is a back-end device providing a service on a specified IP and port.
+  application server
+      A piece of software that makes available another piece of software
+      over a network.
 
-Session persistence
-~~~~~~~~~~~~~~~~~~~
+   ASPs
+      Application Service Providers. Companies that rent specialized
+      applications that help businesses and organizations provide additional
+      services at lower costs.
 
-Session persistence is a feature of the load balancing service. It attempts to force subsequent connections to a service to be redirected to the same node as long as it is online.
+   attribute mapping
+      A method of transforming attributes for an API resource model to match
+      an API resource model on a different system. In the context of
+      federated identity management, attribute mapping is done when
+      a trusted Identity Provider (IdP) and a Service provider have different
+      attribute names and conventions. The attribute mapping can be
+      configured on the sending side (third party identity provider), on
+      the consuming side (Identity API service), or on both.
 
-Virtual IP
-~~~~~~~~~~
+   authentication
+      The act or process of confirming the identity of a
+      user or the truth of a claim. The authentication service
+      confirms that an incoming request is being made by the
+      user who claims to be making the request. The service does this
+      by validating a set of claims that the user makes.
+      These claims are initially in the form of a set of credentials.
+      After initial confirmation based on credentials,
+      the authentication service issues a token to the user.
+      When making subsequent requests, the user can provide the
+      token as evidence that the user's identity has already been authenticated.
 
-A virtual IP is an Internet Protocol (IP) address configured on the load balancer for use by clients connecting to a service that is load balanced. Incoming connections are distributed to back-end nodes based on the configuration of the load balancer.
+   authentication token
+      An encrypted string returned by the Identity service in response
+      to an authentication request submitted with valid credentials. The
+      token stores information about the services and operations
+      available to the authenticated user and provides a secure way to
+      transmit authentication information when submitting API requests.
+
+   authorization
+      Process that determines the capabilities available to an
+      authenticated user, system or process. Authorization ensures that
+      clients have appropriate access to information and information
+      processing capabilities based on roles and policy-based access
+      control defined by the organization.
+
+   backup
+      A copy of computer data for a database instance that
+      can be used to restore the original instance if necessary.
+
+   backup configuration
+      Defines what needs to be backed up and when it needs to be backed up.
+      The backup configuration includes a schedule for the backup,
+      files to back up, and notifications.
+
+   backup schedule
+      Can be defined to create server images at regular intervals
+      (daily and weekly). Backup schedules are configurable per server.
+
+   bandwidth
+      The amount of available data used by communication resources
+      such as the Internet. Bandwidth refers to the amount of
+      data that is used to download things or the amount of data
+      available to download.
+
+   binary
+      A base 2 numbering scheme in which there are only two possible
+      values for each digit: 0 and 1.
+
+   bit
+      A contraction of the term "binary digit", a bit is an individual
+      1 or 0 in the binary numbering system. Bandwidth usage is
+      measured in bits-per-second.
+
+   bit torrent
+      A peer-to-peer system that legally shares files such as legal
+      software updates, movies and other resources.
+
+   blog
+      An online journal. Blogs can be either personal or professional in tone.
+
+   BPS
+      Bits-per-second. The most universal measurement of how quickly
+      data is transferred from place to place.
+
+   browser
+      Any client software that allows a computer or device to access the
+      Internet. Examples of browsers include Microsoft Internet Explorer,
+      Mozilla Firefox, and Google Chrome.
+
+   byte
+      A unit of data that is eight bits long.
+
+   caching rule
+      Provides fine-grained control over the time-to-live (TTL) of an
+      object. When the TTL expires for an object, the edge node pulls the
+      object from the origin again.
+
+   CDN
+      Content Delivery Network. A system of distributed servers
+      (network) that deliver web pages and other web content
+      to a user based on the geographic locations of the user,
+      the origin of the web page, and a content delivery server.
+
+   CDN-enabled Containers
+      Containers that serve content through the Akamai
+      content delivery network (CDN). When a container is CDN-enabled,
+      any files in the container are publicly accessible and
+      do not require an authentication token for read access.
+      However, uploading content into a CDN-enabled container is
+      a secure operation and requires a valid authentication token.
+      Each published container has a unique URL that can
+      be combined with its object name and openly distributed
+      in web pages, emails, or other applications.
+
+   certificate authority
+      Issuer of online security certificates that shows if a web site
+      is verified as safe.
+
+   check
+      The foundational building block of the monitoring system,
+      and is always associated with an entity.
+      Checks explicitly specify how you want to monitor an entity.
+      Once you've created an entity, you can configure
+      one or more checks for it. The check specifies the parts
+      or pieces of the entity that you want to monitor,
+      the monitoring frequency, how many monitoring zones are
+      launching the check, and so on. It contains the specific details
+      of how you are monitoring the entity. You can associate
+      one or more checks with an entity. An entity must have
+      at least one check, but by creating multiple checks for an entity,
+      you can monitor several different aspects of a single resource.
+      For each check you create within the monitoring system,
+      you'll designate a check type.
+
+   check type
+      Specifies the type of check you're creating.
+      The check type tells the monitoring
+      system which method to use, such as PING, HTTP, or SMTP,
+      when investigating the monitored resource.
+
+   CIDR
+      Classless Inter-Domain Routing. A method for
+      allocating IP addresses and routing Internet Protocol packets.
+      Used with Cloud Networks.
+
+   claim
+      The process of a worker checking out a message to perform a task.
+      Claiming a message prevents other workers from
+      attempting to process the same messages.
+
+   claim TTL
+      Defines how long a message will be in claimed state.
+      A message can be claimed by one worker at a time.
+
+   cloud computing
+      A set of pooled computing resources delivered over the Internet.
+
+   cloudware
+      Software that exists only on the Internet. No material product
+      resides on your computer or disks.
+
+   cluster
+      A group of servers (nodes). In Cloud Big Data, the servers are virtual.
+
+   collector
+      Collects data from the monitoring zone and directly maps the
+      data to an individual machine or a virtual machine.
+      Monitoring zones contain many collectors, all of which will
+      be within the IP address range listed in the response.
+      **Note: There may also be unallocated IP addresses
+      or unrelated machines within that IP address range.**
+
+   configuration group
+      A collection of key/value pairs, where the valid key/values
+      are defined per datastore. Some directives are capable
+      of being applied dynamically, while other directives require a
+      server restart to take effect. The configuration
+      group can be applied to an instance at creation or
+      applied to an existing instance to modify the behavior of
+      the running datastore on the instance. A configuration
+      group consists of a collection of configuration parameters.
+
+   configuration parameter
+      A key/value pair that represents settings that
+      can be applied to a database instance.
+
+   connection logging
+      Allows logs to be delivered to a Cloud Files account every hour.
+      For HTTP-based protocol traffic, these are
+      Apache-style access logs. For all other traffic,
+      this is connection and transfer logging.
+
+   consumer
+      A server that claims messages from the queue.
+
+   container
+      A storage compartment that provides a way for you to organize data.
+      A container is similar to a folder in Windows or a
+      directory in UNIX. The primary difference between a container
+      and these other file system concepts is that containers cannot be nested.
+
+   convergence
+      The act of Auto Scale adding or removing enough servers
+      to satisfy the needed capacity.
+
+   convergence delta
+      The change in the number of servers that the system makes
+      when a scaling policy is executed. For example, if the
+      convergence delta is 2, then the system adds 2 servers.
+      If it is -10, the system removes 10 servers.
+
+   cookie
+      Information that web pages save and send back as a way to
+      recognize a user so that on succeeding visits, the
+      users are recognized.
+
+   cooldown
+      There are two types of cooldown: group and policy.
+      A group cooldown is the configured length of time that a scaling
+      group must wait after scaling before beginning to scale again.
+      A policy cooldown is the configured length of time that a
+      scaling policy must wait before being able to be executed again.
+
+   CPU alarm
+      Sends a notification when your average CPU usage exceeds the set criteria.
+
+   CPU Check
+      Monitors and displays your server's CPU usage. It
+      also displays your server's historical usage.
+
+   credentials
+      Data that belong to and identify a specific user. Because credentials
+      are assumed to be known by only one user, users who present
+      valid credentials are assumed to have proven that they are who
+      they say they are. Credentials include: matching user name and
+      password, matching user name and API key, a unique token,
+      secret question and answer, digital certificate, and fingerprint.
+
+   cURL command
+      A command line tool for transferring data with URL syntax. The
+      curl command line tool supports many protocols, including HTTP.
+
+   cyberspace
+      Refers to the Internet and all the information stored on it.
+
+   database
+      The database engine running on your instance.
+      Currently the supported database engines and their
+      versions are: MySQL 5.6, MySQL 5.1, Percona 5.6, and MariaDB 10.
+
+   database instance
+      An isolated database environment with compute and
+      storage resources in a single tenant environment on a
+      shared physical host machine. You can run a database
+      instance with your choice of one of the following
+      database engines: MySQL, Percona, or MariaDB.
+
+   data point
+      A value stored at a timestamp bucket. If no value is recorded at a
+      particular time stamp bucket in a series, the value is None (null).
+
+   DDI
+      The customer number assigned to Rackspace Cloud account holders.
+      The DDI corresponds to the tenant ID, which can be found on the
+      Cloud Control Panel or by using the Rackspace Cloud Identity API to
+      view user credentials.
+
+   DHTML
+      Dynamic HyperText Markup Language. Used to refer to pages that use
+      HTML, JavaScript, and CCS to allow users to interact with
+      a web page or show simple animation.
+
+   DNS
+      Domain Name System. Determines Internet domain
+      name-to-address and address-to-name resolutions. All domains
+      and their components, such as mail servers, utilize DNS to
+      resolve to the appropriate locations. DNS servers are
+      usually set up in a master-slave relationship such that failure
+      of the master invokes the slave. DNS servers may also be clustered
+      or replicated such that changes made to one DNS server are
+      automatically propagated to other active servers. **Note: DNS
+      understands only ASCII, so the Cloud DNS Service provides
+      conversion between UTF-8 and ASCII on all calls into the system.**
+
+   DNS record
+      A record that specifies information about a particular domain.
+
+   domain
+      An entity/container of all DNS-related information containing
+      one or more records.
+
+   domain owner
+      Within Rackspace DNS, the account which creates the
+      domain is the domain owner. **Note: Domain registration is
+      currently outside the scope of the Rackspace DNS API.
+      Any references to ownership and management of domain information
+      is only relevant within the context of the Rackspace DNS system.**
+
+   download
+      The transfer of data, usually in the form of files, from one
+      computer to another.
+
+   duck
+      An aquatic bird.
+
+   edge node
+      Point of presence (PoP) servers located around the world. Edge nodes
+      cache content and serve it directly to customers, reducing transit
+      time to a customer's location. Also known as an edge server.
+
+   email
+      System for transferring messages from one computer to another
+      over the Internet.
+
+   endpoint
+      An entry point to an API. The endpoint is defined as a set of
+      base URLs to which API operations are defined relatively. An API
+      may offer serval regional endpoints for a single API.
+
+   endpoint template
+      Provide Cloud Service providers with a method to manage API service
+      endpoints that apply to many or all tenants without having to add
+      each endpoint on each tenant manually.
+
+   entity
+      The object or resource that you want to monitor.
+      An entity is commonly a web server, but it might also be a website,
+      a web page or a web service. When you create an entity,
+      you'll specify characteristics that describe what you are monitoring.
+      At a minimum you must specify a name for the entity.
+      The name is a user-friendly label or description that helps you
+      identify the resource. You can also specify other attributes
+      of the entity, such the entity's IP address, and any metadata
+      that you'd like to associate with the entity.
+
+   error page
+      The html file that is shown to the end user when an
+      error in the service has been thrown. By default every virtual
+      server is provided with the default error file. It is also
+      possible to submit a custom error page via the Load Balancers API.
+
+   federated cloud
+      Encapsulates a pool of interoperable, portable resources from disparate,
+      potentially heterogeneous, cloud systems to enable sharing, migration,
+      and redundancy across environments. Access to these resources is ensured
+      through a common mechanism like a central management system or a common
+      API in conjunction with established identity and authorization
+      management mechanisms.
+
+   FIdM
+      Federated Identity Management. A set of policies, practices, and
+      protocols that can be used to manage authentication and
+      authorization of users, processes, and devices across organizations.
+
+   file system alarm
+      Sends a notification when the disk space in your specified
+      directory exceeds the parameter you set.
+
+   file system check
+      Monitors and displays disk usage in a directory that you specify.
+
+   firewall
+      System that prevents unauthorized access to a computer or a network.
+      Firewalls control incoming and outgoing network traffic by analyzing
+      each packet and determining whether it should be allowed through,
+      based on a predetermined rule set. Firewalls can be hardware-based,
+      software-based, or a combination of hardware and software.
+
+   flash
+      Technology that is used for Internet animation, developed by Macromedia.
+
+   flavor
+      A resource configuration for a server. Each flavor is a unique
+      combination of disk, memory, vCPUs, and network bandwidth.
+
+   FTP
+      File Transfer Protocol. A method of moving files between two
+      separate sites on the Internet.
+
+   gateway
+      Hardware or software that connects two or more networks, converting
+      data to the protocol understood by each network.
+
+   GIF
+      Graphic Interchange Format. A type of image file that is commonly
+      used for animated images on web pages.
+
+   hacker
+      An intruder who attempts to enter a site for the purpose of
+      causing intentional damage.
+
+   HDFS
+      The Apache Hadoop Distributed File System. This is the
+      default file system used in Cloud Big Data.
+
+   health monitor
+      A configurable feature of each load balancer. A health monitor
+      is used to determine whether a back-end node is usable for
+      processing a request. The load balancing service currently
+      supports active health monitoring.
+
+   homepage
+      (1) The main page for any web site. (2) The first page
+      a browser loads when it opens.
+
+   host
+      A computer and/or network facility that stores data and
+      that is available to be accessed by other computers.
+
+   HTML
+      HyperText Markup Language. HTML is used to create documents
+      on the Internet.
+
+   HTTP
+      HyperText Transfer Protocol. The protocol that tells
+      browsers where to find information.
+
+   hypertext
+      Any kind of text that contains a link to some other site, commongly
+      found in documents were clicking on a word or words opens up a
+      different web site.
+
+   hypervisor
+      A program that manages several operating systems (also known as
+      guest machines or virtual machines) to share a single hardware host.
+      The hypervisor manages and allocates resources to the guests.
+
+   Identity assertion
+      A method for expressing the identity of the sender (for example,
+      user name) in a Simple Object Access Protocol (SOAP) message.
+      Identity assertions provide a mechanism for exchanging
+      authentication and authorization between an Identity provider
+      and a service provider to support federated identity management.
+
+   IdP
+      Identity Provider. A trusted provider that creates, maintains, and
+      manages identity information for principals (users, services, or
+      systems) and provides principal authentication to other service
+      providers (applications) within a federation or distributed network.
+      Identity providers issue identification information on behalf of
+      authenticated users that want to interact with different
+      service providers. This process is implemented through an
+      authentication module which verifies a security token as an
+      alternative to explicity authenticating a user within a security
+      realm. Information is transmitted through federation protocols
+      such as SAML and OpenID Connect.
+
+   image
+      A collection of files for a specific operating system (OS)
+      that you use to create or rebuild a server. Rackspace
+      provides pre-built images. You can also create custom images from
+      servers that you have launched. Custom images can be
+      used for data backups or as "gold" images for additional servers.
+
+   image file
+      The actual image in binary data.
+
+   image member
+      A user who has been granted access to an image.
+      Normally, if an image is not public, only the owner
+      can boot from the image.
+
+   image record
+      Provides information about the bootable binary data, including
+      format, size in bytes, checksum, and operating system.
+
+   image tag
+      A string of characters used to identify a specific image or images.
+
+   image task
+      A resource that allows you to perform asynchronous image-related
+      operations such as importing or exporting images.
+      The task resource may be polled to determine the status of
+      the import or export operation, and the resource is deleted
+      at a set time identified by the expires-at parameter.
+
+   ingest
+      The process of obtaining, importing, and processing data for later
+      use or storage in a database. This process can involve modifying
+      individual files by editing their content and/or formatting
+      them to fit into a larger document.
+
+   instance
+      A virtual machine that runs inside the cloud.
+
+   instance type
+      Describes the compute, memory, and storage capacity of Nova
+      computing instances. The instance type is the size
+      (in terms of vCPUs and RAM) of the virtual server that you will be launching.
+
+   internal URL
+      A URL that is accessible only from within the Rackspace cloud
+      network. Access to an internal URL is always free of charge.
+
+   IP address
+      Internet Protocol address. For IPv4, an IP address is a 32-bit
+      number that identifies each sender or receiver of information that
+      is sent in packets across the Internet. In IPv6, an IP address
+      is a 128-bit number.
+
+   isolated network
+      A virtual layer-2 network created through Cloud Networks that can
+      be attached to a new Next Generation Cloud Server. An isolated
+      network keeps your server separate from the Rackspace network,
+      the Internet, or both. When you create an isolated network, it is
+      associated with your tenant ID.
+
+   ISP
+      Internet Service Provider. A provider of Internet access to
+      individuals and businesses.
+
+   JSON
+      Javascript Object Notation. An open standard format that uses
+      human-readable text to transmit data objects consisting of key:value pairs.
+
+   JSON Pointer
+      Defines syntax for identifying a specific value
+      within a JSON document. A restricted JSON pointer is a
+      Unicode string containing a sequence of exactly one
+      reference token, prefixed by a '/' (%x2F) character. Each
+      reference token is a sequence of unreserved and/or
+      percent-encoded characters.
+
+   Java
+      An object-oriented programming language designed for use in the
+      distributed environment of the Internet. Java can be used to create
+      complete applications that can run on a single computer or are
+      distributed across servers and clients in a network. Java can also
+      be used to build a small application module or applet for use as part
+      of a web page. Applets allow users to interact with the web page.
+
+   JavaScript
+      An interpreted programming or script language used in web pages.
+
+   KVM
+      Kernal Virtual Machine. A Linux kernal module that allows a user
+      space program to use the hardware virtualization features of
+      various processors.
+
+   label
+      Assigns a meaningful name to a check.
+
+   language-specific API
+      Provide a layer of abstraction on top of the base REST API,
+      enabling programmers to work with a container and object model
+      instead of working directly with HTTP requests and responses.
+      Language-specific APIs are available in several popular
+      languages for Cloud Files.
+
+   launch configuration
+      Contains the necessary details for adding and removing servers
+      from a scaling group in the Rackspace Auto Scale API.
+      The ``launchConfiguration`` object specifies whether you
+      are creating a server or a load balancer and the necessary
+      details about the configuration.
+
+   layer-2 network
+      A virtual Ethernet network that is managed by the OpenStack
+      Networking service. Currently, Rackspace Networking manages only
+      Ethernet networks.
+
+   LDAP
+      Lightweight Directory Access Protocol. An application protocol for
+      accessing and maintaining distributed directory information
+      services over an IP network. The Rackspace Identity service can
+      use an LDAP backend as a datastore.
+
+   load average alarm
+      Sends a notification when your system's load exceeds a
+      number you specify for greater than **X** number of minutes.
+      **X** is generally set for 5 minutes.
+
+   load average check
+      Monitors and displays your server's load average. This
+      option is most often used with Linux machines.
+
+   load balancer
+      A logical device which belongs to a cloud account.
+      It is used to distribute workloads between multiple back-end
+      systems or services, based on the criteria defined as
+      part of its configuration.
+
+   MapReduce
+      A framework for performing calculations on the data in the
+      distributed file system. Map tasks run in parallel with each other.
+      Reduce tasks also run in parallel with each other.
+
+   media type
+      A standard identifier used on the Internet to indicate the
+      type of data contained in a file. A media type is composed of
+      a type, a subtype, and zero or more optional parameters.
+
+   memory alarm
+      Notifies when your server's memory usage goes above
+      the percentage you set in the criteria.
+
+   memory check
+      Monitors and displays your server's memory use (RAM) and historical usage.
+
+   message
+      A task, a notification, or any meaningful data that a producer
+      or publisher sends to the queue. A message exists until it is
+      deleted by a recipient or automatically by the system
+      based on a TTL (time-to-live) value.
+
+   message TTL
+      Defines how long a message will be accessible.
+
+   metadata
+      Optional information that you can assign to Cloud Files accounts,
+      containers, and objects through the use of a metadata header.
+
+   metric series
+      A named set of data points. A series is identified by a unique name,
+      which is composed of elements separated by periods that are used
+      to display the collection of series in a hierarchal tree.
+
+   middleware
+      Software that connects two otherwise separate applications.
+
+   monitoring zone
+      The "launch point" of a check. When you create a check,
+      you specify which monitoring zone(s) you want to launch the check from.
+      A monitoring zone is similar to a datacenter, however in the
+      monitoring system, you can think of it more as a geographical region.
+      You can launch checks for a particular entity from multiple
+      monitoring zones. This allows you to observe the performance of an
+      entity from different regions of the world. It is also a way of adding
+      redundancy to make the alarm less sensitive to external factors.
+      For example, if the check from one monitoring zone reports that
+      an entity is down, a second or third monitoring zone might report
+      that the entity is up and running. This gives you a better picture
+      of an entity's overall health.
+
+  monitoring_zone_polls
+      Specifies the monitoring zones that will launch the check.
+
+   network
+      An isolated virtual layer-2 broadcast domain that is typically
+      reserved for the tenant who created it unless the network is
+      configured to be shared. Tenants can create multiple networks until
+      they reach the thresholds specified by per-tenant quotas.
+
+   network alarm
+      Sends a notification when either of the network receive or
+      the network transmit rate alarms are triggered.
+
+   network check
+      Monitors your network receiving and transmitting traffic.
+      The unit of value for this alarm is megabits per second (Mbit/s).
+      This check also displays your traffic usage. Unlike the
+      other alarms in this list, you set the network check alarm
+      variable upon network check creation.
+
+   node
+      A back-end device providing a service on a specified IP and port.
+
+   notification
+      An informational message sent to one or more addresses by the
+      monitoring system when an alarm is triggered. You can set up
+      notifications to alert a single individual or an entire team.
+      Rackspace Cloud Monitoring currently supports webhooks and
+      email for sending notifications.
+
+   notification plan
+      Contains a set of notification rules to execute when an
+      alarm is triggered. A notification plan can contain multiple
+      notifications for each of the following states: Critical, Warning, Ok.
+
+   OAuth
+      Open standard for Authorization. Provides a method for clients to
+      access server resources on behalf of a resource owner such
+      as a different client or an end-user. OAuth also provides a
+      process for end-users to authorize third-party access to their server
+      resources without sharing their credentials by using user-agent
+      redirections. Typically, OAuth protects credentials like
+      user name and password.
+
+   origin
+      An address (IP or domain) from which the CDN provider pulls content.
+      A service can have multiple origins.
+
+   operations
+      The actions you perform against your account in Cloud Files,
+      such as creating or deleting containers. Operations are performed
+      via the REST web service API or a language-specific API.
+
+   period
+      Specifies how often Cloud Monitoring collectors run this check.
+
+   PoP
+      Point of Presence. The point at which two or more different networks
+      or communication devices build a connect with each other. PoP mainly
+      refers to an access point, location, or facility that connects to
+      and helps other devices establish a connection with
+      the Internet.
+
+   port
+      A virtual switch port on a logical network switch. Virtual instances
+      attach their interfaces into ports. The logical port also defines
+      the MAC address and the IP addresses to be assigned to the interfaces
+      plugged into them. When creating a port, any unallocated IP in the subnet
+      can be stated specifically, even if the IP address is not in the
+      allocation pool. Enabling users to specify the IP explicitly allows
+      them to retain a particular subset of the subnet IPs for static
+      allocation.
+
+   private container
+      A container that is only accessible by the account holder.
+
+   producer
+      A server or application that sends messages to the queue.
+
+   producer-consumer
+      A pattern where each worker application that reads the queue
+      has to claim the message in order to prevent duplicate processing.
+      Later, when work is done, the worker is responsible for
+      deleting the message. If message is not deleted in a predefined time,
+      it can be claimed by other workers.
+
+   pseudo directories
+      A hierarchical structure within a single Cloud Files container
+      created adding forward slash (/) in the object name.
+
+   public container
+      A CDN-enabled container that is publicly accessible.
+
+   PublicNet
+      Provides access to the Internet for Rackspace services such as
+      Cloud Monitoring, Managed Cloud Service Level, RackConnect,
+      Cloud Backup, and certain operating system updates.
+      When you list networks through Cloud Networks, PublicNet is labeled public.
+
+   public URL
+      A URL that is accessible from anywhere. Access to a public URL
+      usually incurs traffic charges.
+
+   publisher
+      A server or application that posts messages to the queue with the
+      intent to distribute information or updates to multiple subscribers.
+
+   publisher-subscriber
+      A pattern where all worker applications have access to all
+      messages in the queue. Workers cannot delete or update messages.
+
+   purge
+      Removes content from edge nodes, allowing content to be refreshed
+      from your origin servers.
+
+   QEMU
+      A generic and open source machine emulator and virtualizer. QEMU
+      supports virtualization when executing under the Xen hypervisor
+      or when using the KVM kernal module in Linux.
+
+   queue
+      The entity that holds messages. Ideally, a queue is created per
+      work type. For example, if you want to compress files,
+      you would create a queue dedicated to this job.
+      Any application that reads from this queue would only compress files.
+
+   RBAC
+      Role-Based Access Control. A method to restrict service access
+      to only authorized users. RBAC allows customers to specify who
+      has access to resources and capabilities within their cloud
+      deployment, based on roles defined by Rackspace.
+
+   reboot
+      Performs either a soft or hard reboot of a server.
+      A soft reboot is a graceful shutdown and restart of your
+      server's operating system. A hard reboot power cycles your server,
+      which performs an immediate shutdown and restart.
+
+   rebuild
+      Removes all data on the server and replaces it with the specified
+      image. Server ID and IP addresses on the server remain
+      the same.
+
+   record
+      Belongs to a particular domain and is used to specify information
+      about the domain. There are several types of DNS records.
+      Each record type contains particular information used to describe
+      that record's purpose. Examples include mail exchange (MX)
+      records, which specify the mail server for a particular domain,
+      and name server (NS) records, which specify the authoritative
+      name servers for a domain.
+
+   replica
+      An exact copy of a database instance that is kept synchronized
+      with its database instance source.
+
+   resize
+      Converts an existing server to a different flavor, which scales
+      the server up or down. The original server is saved for a
+      period of time to allow rollback if a problem occurs. You can
+      confirm or revert a resize. A confirmed resize removes the
+      original server, while a reverted resize restores the original
+      server. All resizes are automatically confirmed after 24 hours
+      if you do not explicitly confirm or revert them.
+
+   resolution
+      The number of seconds per data point in a metric series. Series are
+      created with a resolution which determines how often a data point
+      can be stored. This resolution is represented as the number of seconds
+      in time that each data point covers. A series that stores one data
+      point per minute has a resolution of 60 seconds. Similarly, a series
+      that stores one data point per second has a resolution of 1 second.
+
+   resource
+      A template artifact that represents some component of your
+      desired architecture, such as a Cloud Server, a group of scaled
+      Cloud Servers, a load balancer, or some configuration management system.
+
+   REST
+      Representational State Transfer. An architectural style for large-scale
+      software design.
+
+   RESTful
+      A kind of web service API that uses REST.
+
+   restore
+      The process of bringing your system back to a previously saved
+      state, usually by using a backup as the checkpoint.
+
+   restore configuration
+      Defines what the restore checkpoint is and the where the
+      backup should be restored.
+
+   restriction
+      Enables you to define rules about who can or cannot access content
+      from the cache.
+
+   role
+      A common security construct for assigning a specific set of
+      access rights and privileges to a user or group of users.
+      Service administrators can create named roles, configure the rights
+      and privileges for each role, and manage the role without
+      updating individual user or group accounts assigned to the role.
+
+   rollup
+      Performs functions on a set of data that has been ingested, such as
+      downsampling calculations and summarizing raw data to condense
+      the size of the original data sample.
+
+   SAML
+      Security Assertion Markup Language. An XML-based, open-standard
+      data format for exchanging authentication and authorization data
+      between parties, particularly an identity provider and a
+      service provider. SAML is a product of the OASIS Security Services
+      Technical Committee.
+
+   SAML assertion
+      Contains a packet of user security information that can be
+      transferred from identity providers to service providers to validate
+      authentication and authorization rights. The service provider
+      uses this information to make access-control decisions. The
+      Rackspace Identity services uses SAML assertions to provide
+      authentication tokens to federated users.
+
+   scaling
+      The process of adjusting a server configuration in response
+      to variations in workload.
+
+   scaling group
+      Identifies servers and load balancers that are managed by a scaling policy.
+
+   scaling policy
+      Manages a scaling group.
+
+   schema
+      Some Rackspace APIs supply json documents describing the
+      JSON-encoded data structures that represent domain objects,
+      so that a client knows exactly what to expect in an API response.
+
+   SCP server proxy
+      An SCP service that runs on your Hadoop cluster and distributes your
+      files across the cluster.
+
+   segmentation
+      The process of segmenting a large file into a number of smaller
+      files for uploading to Cloud Files. The default size limit
+      of a single uploaded object is 5 GB, however, the download size of a
+      single object is virtually unlimited with the use of segmentation.
+      Segments of the larger object are uploaded and a special manifest
+      file is created that, when downloaded, sends all the segments concatenated
+      as a single object. Segmentation also offers much greater upload
+      speed with the possibility of parallel uploads of the segments.
+
+   server
+      A computer that provides explicit services to the client software
+      running on that system. A server is a virtual machine (VM) instance
+      in the Cloud Servers environment. To create a server, you must
+      specify a name, flavor reference, and image reference.
+
+   server setup
+      Because Cloud Backup is a file-level backup product, you must
+      configure a separate backup for each cloud server and that a backup
+      does not automatically apply to an entire environment.
+      You must select the files and folders you want to back up from your
+      cloud server. This setup requirement applies to Rackspace
+      Cloud Servers, including the Performance Cloud Servers offering.
+
+   service
+      A logical name for the internal and external capabilities provided
+      on a Cloud platform or product component. A service provides
+      one or more endpoints through which users can access
+      resources and perform operations. **Note: for Cloud Servers,
+      a service is a node on a server instance that runs nova code.**
+
+   service catelog
+      The list of services available to you, as returned along with your
+      authentication token and an expiration date for that token.
+      All the services in your service catalog should recognize your
+      token as valid until it expires. The catalog listing for each
+      service provides at least one endpoint URL for that service.
+      Other information, such as regions and versions and tenants, is
+      provided if it is relevant to your access to this service.
+
+   ServiceNet
+      Provides access to Rackspace services such as Cloud Files,
+      Cloud Databases, and Cloud Backup, and to certain packages and
+      patches through an internal only, multi-tenant network connection
+      within each Rackspace data center. When you list networks
+      through Cloud Networks, ServiceNet is labeled as private.
+
+   session persistence
+      A feature of the load balancing service that attempts to force
+      subsequent connections to a service to be redirected to
+      the same node as long as the node is online.
+
+   shared IP address
+      A public IP address that can be shared across multiple servers
+      for use in various high availability scenarios. When an IP address
+      is shared to another server, the cloud network restrictions are
+      modified to allow each server to listen to and respond
+      on that IP address. You can also specify that the target server
+      network configuration be modified.
+
+   shared IP group
+      A collection of servers that can share IPs with other members
+      of the group. Any server in a group can share one or more
+      public IPs with any other server in the group. With the exception
+      of the first server in a shared IP group, servers must be
+      launched into shared IP programs. A server may only be a member of
+      one shared IP group.
+
+   snapshot
+      A point-in-time copy of the data contained in a volume.
+
+   social networking
+      Joining groups and websites where you find people with similar
+      interests. Individuals and businesses use social networks such as
+      Facebook, LinkedIn, and Twitter to share online experiences with others.
+
+   stack
+      A group of resources, such as servers, load balancers, and databases,
+      combined to fulfill a useful purpose. Based on a template,
+      Heat orchestration engine creates an instantiated set of
+      resources (a stack) to run the application framework or component
+      specified (in the template). A stack is a running instance of a template.
+      The result of creating a stack is a deployment of the
+      application framework or component.
+
+   status
+      Indicates the current state of a service. The time it takes for a
+      service configuration to be distributed to a CDN provider
+      cache can vary.
+
+   subdomain
+      Domains within a parent domain that cannot be registered.
+      Subdomains allow you to delegate domains. Subdomains can themselves
+      have subdomains, so third-level, fourth-level, fifth-level,
+      and deeper levels of nesting are possible.
+
+   subnet
+      An IP address block that can be used to assign IP addresses to
+      virtual instances. Each subnet must have a CIDR and be associated
+      with a network. IPs can be selected either from the whole subnet
+      CIDR or from allocation pools that can be specified by the user.
+
+   subscriber
+      An observer that watches messages like an RSS feed
+      but does not claim any messages.
+
+   template
+      A portable file, written in a user-readable language, that
+      describes how a set of resources should be assembled
+      and what software should be installed in order to produce a working
+      stack. The template specifies what resources should be used,
+      what attributes can be set, and other parameters that are critical
+      to the successful, repeatable automation of a specific application stack.
+
+   tenant
+      A container used to group or isolate resources or identity objects.
+      Depending on the service operator, a tenant could map to a
+      customer, account, organization, or project.
+
+   timestamp
+      A point in time at which values can be associated. Time in Cloud
+      Metrics is represented as epoch time with a maximum
+      resolution of 1 second.
+
+   token
+      An opaque string that represents an authorization to access
+      cloud resources. Tokens may be revoked at any time and are valid
+      for a finite duration.
+
+   TTL
+      Time-to-live value.
+
+   URI
+      Uniform Resource Identifier. A string of characters used to
+      identify the name of a web resource. The URI syntax
+      consists of a URI scheme name (such as "http", "ftp", or "file")
+      followed by a colon character, and then by a
+      scheme-specific part (which varies depending on the context).
+
+   Unicode
+      The universal character encoding standard for written characters
+      and text. The Unicode Standard defines a consistent way of
+      encoding multilingual text that enables the exchange of text
+      data internationally and creates the foundation for global
+      software.
+
+   user
+      A digital representation of a person, system, or service that
+      uses cloud services. Users have credentials and can be assigned
+      tokens. They can present this information to the Identity service
+      or other cloud services to confirm identity and verify
+      permission to access the requested system resources.
+
+   UUID
+      Universal Unique Identifier. A 128-bit that is used to uniquely
+      identify an object on the Internet.
+
+   virtual IP
+      An Internet Protocol (IP) address configured on the load balancer
+      for use by clients connecting to a service that is
+      load balanced. Incoming connections are distributed to
+      back-end nodes based on the configuration of the load balancer.
+
+   virus
+      A harmful piece of computer programming that interferes with
+      normal computer and Internet operations.
+
+   VMM
+      Virtual Machine Monitor. The piece of software responsible for
+      monitoring and enforcing policy on the virtual machines for which
+      it is responsible. If a VMM runs in place of (instead of on top of)
+      an operating system, it is also known as a hypervisor.
+
+   volume
+      User-specified storage that contains the database engine data directory.
+      Volumes are automatically provisioned on shared
+      Internet Small Computer System Interface (iSCSI)
+      storage area networks (SAN) that provide for increased performance,
+      scalability, availability and manageability.
+      Applications with high I/O demands are performance optimized and
+      data is protected through both local and network RAID-10.
+      Additionally, network RAID provides synchronous replication of
+      volumes with automatic failover and load balancing across
+      available storage clusters.
+
+   volume type
+      There are two types of block storage volumes: SATA for
+      standard performance and SSD for high performance.
+
+   webhook
+      A URL that can activate a policy without authentication.
+
+   worker
+      A client that claims messages from the queue and performs actions
+      based on those messages.
+
+   Xen
+      A native (bare-metal) hypervisor providing services that allow
+      multiple computer operating systems to execute on the same
+      computer hardware concurrently. It was originally developed by
+      University or Cambridge Computer Laboratory and is a free and
+      open-source software project maintained by the Xen community.
