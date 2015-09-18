@@ -44,7 +44,7 @@ See the following resources for more information about $productName:
 
 .. _common-dg-overview-pricingsla:
 
-Pricing and service level
+Pricing and service terms
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: product-specific-sla.txt
