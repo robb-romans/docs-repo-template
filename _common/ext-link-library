@@ -1,4 +1,5 @@
 # External link library
+# For information about using the external link definitions, see https://github.com/rackerlabs/docs-migration/tree/master/docs.
 extlinks = {
     'rax': ('http://www.rackspace.com/%s', ''),
     'rax-cloud': ('http://www.rackspace.com/cloud/%s', ''),
