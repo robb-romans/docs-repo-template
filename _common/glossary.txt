@@ -1123,6 +1123,9 @@ Glossary
       Additionally, network RAID provides synchronous replication of
       volumes with automatic failover and load balancing across
       available storage clusters.
+      
+      For Cloud Block Storage, a volume is a detachable block storage device. You can 
+      think of it as a USB hard drive. It can only be attached to one instance at a time.
 
    volume type
       There are two types of block storage volumes: SATA for
