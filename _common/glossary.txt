@@ -164,6 +164,16 @@ Glossary
       (network) that deliver web pages and other web content
       to a user based on the geographic locations of the user,
       the origin of the web page, and a content delivery server.
+      
+      For Rackspace CDN, a content delivery network (CDN) is a system 
+      of multiple computers that contains copies of data stored at various 
+      network nodes. A CDN is designed to improve performance of publicly 
+      distributed assets. Assets can be anything from website content, to 
+      web application components, to media such as videos, ads, and interactive 
+      experiences.  CDNs decrease the load time of these assets by caching them on 
+      edge nodes, also called edge servers or point of presence (PoPs) servers.  
+      Edge nodes are distributed around the globe, so requests travel to a local 
+      location to get assets rather than to and from a data center based far from the end user.
 
    CDN-enabled Containers
       Containers that serve content through the Akamai
@@ -351,7 +361,11 @@ Glossary
 
    domain
       An entity/container of all DNS-related information containing
-      one or more records.
+      one or more records. A domain represents the domain name through 
+      which visitors retrieve content. The underlying site might be served 
+      through a CDN. A service can have multiple domains. The CDN provider 
+      provides users with a Canonical Name (CNAME) to specify for their 
+      domain name as an alias.
 
    domain owner
       Within Rackspace DNS, the account which creates the
@@ -435,7 +449,9 @@ Glossary
 
    flavor
       A resource configuration for a server. Each flavor is a unique
-      combination of disk, memory, vCPUs, and network bandwidth.
+      combination of disk, memory, vCPUs, and network bandwidth. For Rackspace 
+      CDN, a flavor is a mapping configuration to a CDN provider that enables 
+      you to decide which CDN features that you want your service to use.
 
    FTP
       File Transfer Protocol. A method of moving files between two
@@ -967,8 +983,10 @@ Glossary
       A logical name for the internal and external capabilities provided
       on a Cloud platform or product component. A service provides
       one or more endpoints through which users can access
-      resources and perform operations. **Note: for Cloud Servers,
-      a service is a node on a server instance that runs nova code.**
+      resources and perform operations. **Note: For Cloud Servers,
+      a service is a node on a server instance that runs nova code.
+      For Rackspace CDN, a service represents an application that has its
+      content cached to edge nodes.**
 
    service catelog
       The list of services available to you, as returned along with your
