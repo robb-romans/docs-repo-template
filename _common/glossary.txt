@@ -739,7 +739,15 @@ Glossary
       resources without sharing their credentials by using user-agent
       redirections. Typically, OAuth protects credentials like
       user name and password.
-
+      
+   object
+      In Cloud Files, Objects are the basic storage entities. They 
+      represent the files and their optional metadata that you upload 
+      to the system. When you upload objects to Cloud Files, the data 
+      is stored as-is (without compression or encryption) and consists 
+      of a location (container), the object's name, and any metadata 
+      that you assign, consisting of key/value pairs. 
+      
    origin
       An address (IP or domain) from which the CDN provider pulls content.
       A service can have multiple origins.
