@@ -64,37 +64,22 @@ in the template for the Getting Started content architecture.
                                           
 ```
                                           
-
 Integrate your use cases into this architecture by adding them as H1 topics so the major 
 headings are at the same levels as *Prerequsities*, *Send API requests*, and so on.
 
 
-**New topics**
+**Update Authentication section in General API Info section**
 
-Getting Started.rst: Main heading for Getting Started content.
-
-Get credentials: Shows screen cap and instructions for getting and saving API key and account number.
-
-Index.rst: Index to set up the GS content H1 and H2 content structure; intro paragraph 
-            provides overview of GS intro content and use cases. 
-             
-Prerequisites: List of what you need to get started with API with links to other topics.
-
-Send API requests: Intro topic with includes of using curl and using CLI topics
-
-Using environment variables: Note with more info about environment variables.
-
-Authentication:  Intro to authentication topic with links to Identity docs and includes 
-                 for using cURL and using CLI. 
-
-
-The Authentication topics will replace most of the information in the Authentication section of 
+The Authentication topics replace most of the information in the Authentication section of 
 the General API info section.
 
-In the Developer Guide, you can replace the Authentication content with the following:
+You can replace the content in the Authentication.rst source file with the following content:
 
 ````
-Each REST request against the Cloud Big Data service requires the inclusion of a specific authorization token, supplied in the X-Auth-Token HTTP header of each API request. You get a token by submitting an authentication request with valid account credentials to the following Rackspace Cloud Identity API service endpoint:
+Each REST request against the Cloud Big Data service requires the inclusion of a specific 
+authorization token, supplied in the X-Auth-Token HTTP header of each API request. You get 
+a token by submitting an authentication request with valid account credentials to the 
+following Rackspace Cloud Identity API service endpoint:
 
 .. code::
 
