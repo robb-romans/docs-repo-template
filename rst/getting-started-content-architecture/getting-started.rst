@@ -10,6 +10,6 @@ and complete the basic operations for using the Cloud Big Data API by using the 
 and the Lava client command line tools.
 
 .. note:: 
-		You can also access |apiservice| features from the `Rackspace Cloud Control Panel`_
+		You can also access |apiservice| features from the `Rackspace Cloud Control Panel`_.
 
 .. _Rackspace Cloud Control Panel: https://mycloud.rackspace.com  

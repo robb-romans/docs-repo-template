@@ -1,4 +1,4 @@
-.. _environment-variables:
+.. _env-variables:
  
 ..  note:: 
 		The environment variables created with the ``export`` command are 
