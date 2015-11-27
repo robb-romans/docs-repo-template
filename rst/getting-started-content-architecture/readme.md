@@ -10,7 +10,7 @@ in the template for the Getting Started content architecture.
 
 ````
 
-├── common                                Common files for Getting Started module
+├── common-gs                             Common files for Getting Started module
 │   │
 │   ├── auth-using-client.rst             Auth-using-client template; topic to be customized per guide
 │   │                                     Included in authentication.rst topic
