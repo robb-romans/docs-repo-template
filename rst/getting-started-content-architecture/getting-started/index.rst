@@ -10,5 +10,3 @@
    prerequisites <prerequisites-for-using-api>
    Send API requests <send-request-ovw>
    Authenticate <authenticate>
-   auth-using-curl
-   auth-using-client

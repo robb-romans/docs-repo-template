@@ -10,6 +10,7 @@ header of each API request.
 With a valid token, you can send API requests to any of the API service endpoints that you 
 are authorized to use. The authentication response includes a token expiration date. When a token 
 expires, you can send another authentication request to get a new one.
+ 
 
 .. note::
      For more information about authentication tokens, see the following topics in the 
@@ -24,5 +25,7 @@ expires, you can send another authentication request to get a new one.
     
      - :rax-devdocs:`Manage tokens and token expiration<cloud-identity/v2/developer-guide/#manage-authentication-tokens>`  
   
-.. include:: auth-using-curl.rst
-.. include:: auth-using-client.rst
+.. include:: ../common-gs/auth-using-curl.rst
+.. include:: ../common-gs/auth-using-client.rst
+
+

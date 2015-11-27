@@ -11,8 +11,8 @@ Prerequisites
 
 If you don't have an account, `sign up`_ for one.
 You can find your account number and API key on the Account Settings page in the Cloud Control Panel.
-
-.. include:: ../common/get-credentials.rst
+    
+.. include:: ../common-gs/get-credentials.rst    
     
 .. _Cloud Control Panel: https://mycloud.rackspace.com    
 .. _sign up: https://cart.rackspace.com/cloud/
