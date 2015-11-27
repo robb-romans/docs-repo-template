@@ -73,22 +73,31 @@ headings are at the same levels as *Prerequsities*, *Send API requests*, and so 
 The Authentication topics replace most of the information in the Authentication section of 
 the General API info section.
 
-You can replace the content in the Authentication.rst source file with the following content:
+In the General API info section, replace the content in the Authentication.rst source file 
+with the following content:
 
 ````
+.. _authentication-ovw: 
+
+==============
+Authentication
+==============
+
 Each REST request against the Cloud Big Data service requires the inclusion of a specific 
-authorization token, supplied in the X-Auth-Token HTTP header of each API request. You get 
-a token by submitting an authentication request with valid account credentials to the 
-following Rackspace Cloud Identity API service endpoint:
+authorization token, supplied in the ``X-Auth-Token`` HTTP header of each API request. 
+You get a token by submitting an authentication request with valid account credentials to 
+the following Rackspace Cloud Identity API service endpoint:
 
 .. code::
-
-https://identity.api.rackspacecloud.com/v2.0
+     
+       https://identity.api.rackspacecloud.com/v2.0
 
 For details see the following information:
 
-Authenticate to the Rackspace Cloud
-Rackspace Cloud Identity API developer documentation
+- :ref:`Authenticate to the Rackspace Cloud<authenticate-to-cloud>`
+- :rax-devdocs:`Rackspace Cloud Identity API developer documentation 
+  <cloud-identity/v2/developer-guide/>`
+
 
 ````
 
