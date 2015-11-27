@@ -8,6 +8,8 @@ Getting Started Guide intro architecture:
 The following tree structure describes the RST source, code samples, and image files 
 in the template for the Getting Started content architecture.
 
+````
+
 ├── common                                Common files for Getting Started module
 │   │
 │   ├── auth-using-client.rst             Auth-using-client template; topic to be customized per guide
@@ -59,6 +61,9 @@ in the template for the Getting Started content architecture.
 │
 └── getting-started.rst                   Intro topic for main header in contents. Customize 
                                           description per guide. 
+                                          
+```
+                                          
 
 Integrate your use cases into this architecture by adding them as H1 topics so the major 
 headings are at the same levels as *Prerequsities*, *Send API requests*, and so on.
