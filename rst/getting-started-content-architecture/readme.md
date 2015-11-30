@@ -59,8 +59,8 @@ in the template for the Getting Started content architecture.
 │   └── send-request-ovw.rst              Common intro topic for Send requests: customize  
 │                                         depending on whether service has cURL and CLI.
 │
-└── getting-started.rst                   Intro topic for main header in contents. Customize
-                                          description per guide.
+└── getting-started.rst                   Intro topic for main header in contents. Use the description in the Customize
+                                          template as an example. Customize the text to match the details for each product.
 
 ```
 
