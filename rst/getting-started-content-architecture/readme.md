@@ -100,13 +100,16 @@ For details see the following information:
 
 
 ````
-Make sure you also update your `conf.py` file with the following:
 
-Add the `common-gs` folder to the `exlude_patterns`:
+**Update your conf.py file**
+
+Add the `common-gs` folder to the `exlude_patterns`. For example:
 
 exclude_patterns = ['_build', 'samples', 'api-operations/methods*', 'common-gs']
 
-Add the `apiservice` shortcut the `rst_epilog`:
+Add the `apiservice` shortcut the `rst_epilog`. For example:
+
+````
 
 rst_epilog = """
 .. |apiservice| replace:: Rackspace Cloud Servers API
@@ -115,8 +118,9 @@ rst_epilog = """
 .. |product name| replace:: Rackspace Cloud Servers
 """
 
-.. note::
-   Make sure to replace **Rackspace Cloud Servers** with your product name.
+````
+
+Don't forget to replace **Rackspace Cloud Servers** with your product name.
 
 Also, after updating the `authentication.rst` file in the General API info
 section, be sure to fix the reference in `service-access-endpoints.rst`, also
