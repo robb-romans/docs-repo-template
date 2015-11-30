@@ -2,10 +2,10 @@ This content architecture is a template for the beginning sections of a Getting 
 
 In the generated output, the content structure is like the one shown in the following example:
 
-Getting Started Guide intro architecture: 
+Getting Started Guide intro architecture:
 ![alttext](https://raw.githubusercontent.com/meker12/docs-common/master/templates/getting-started-intro-content.png "GS TOC")
 
-The following tree structure describes the RST source, code samples, and image files 
+The following tree structure describes the RST source, code samples, and image files
 in the template for the Getting Started content architecture.
 
 ````
@@ -21,7 +21,7 @@ in the template for the Getting Started content architecture.
 │   ├── get-credentials.rst               Common file to get account info from Control Panel
 │   │                                     Included in prerequisites-for-using-api.rst
 │   │
-│   ├── how-to-use-curl.rst               Common topic for all guides. 
+│   ├── how-to-use-curl.rst               Common topic for all guides.
 │   │
 │   │                                     Requires using common auth-using-client.rst template
 │   │                                     because of link to "Create environment variables".
@@ -35,14 +35,14 @@ in the template for the Getting Started content architecture.
 │   │   │
 │   │   ├── auth-token-object.rst         Common token obj used in auth-using-curl.rst
 │   │   │   
-│   │   └── service-catalog-endpoint.rst  Endpoint example in auth-using-curl.rst - 
+│   │   └── service-catalog-endpoint.rst  Endpoint example in auth-using-curl.rst -
 │   │                                     Replace code sample with product-specific info.
 │   │
-│   ├── using-client.rst                  Template topic for using client.  Customize per 
+│   ├── using-client.rst                  Template topic for using client.  Customize per
 │   │                                     guide. See Servers and Cloud Big Data GS for examples.
 │   │            
-│   └── using-env-variables.rst           Note about env variables session restriction and link to more info about using 
-│   │                                     Used in auth-using-curl and auth-using-client. 
+│   └── using-env-variables.rst           Note about env variables session restriction and link to more info about using
+│   │                                     Used in auth-using-curl and auth-using-client.
 │   │
 ├── getting-started
 │   │
@@ -53,51 +53,77 @@ in the template for the Getting Started content architecture.
 │   │
 │   │
 │   │
-│   ├── prerequisites-for-using-api.rst   Common intro to capture what's needed 
+│   ├── prerequisites-for-using-api.rst   Common intro to capture what's needed
 │   │                                     to use API. Might require additional info per product.
 │   │
 │   └── send-request-ovw.rst              Common intro topic for Send requests: customize  
-│                                         depending on whether service has cURL and CLI. 
+│                                         depending on whether service has cURL and CLI.
 │
-└── getting-started.rst                   Intro topic for main header in contents. Customize 
-                                          description per guide. 
-                                          
+└── getting-started.rst                   Intro topic for main header in contents. Customize
+                                          description per guide.
+
 ```
-                                          
-Integrate your use cases into this architecture by adding them as H1 topics so the major 
+
+Integrate your use cases into this architecture by adding them as H1 topics so the major
 headings are at the same levels as *Prerequsities*, *Send API requests*, and so on.
 
 
 **Update Authentication section in General API Info section**
 
-The Authentication topics replace most of the information in the Authentication section of 
+The Authentication topics replace most of the information in the Authentication section of
 the General API info section.
 
-In the General API info section, replace the content in the Authentication.rst source file 
+In the General API info section, replace the content in the Authentication.rst source file
 with the following content:
 
 ````
-.. _authentication-ovw: 
+.. _authentication-ovw:
 
 ==============
 Authentication
 ==============
 
-Each REST request against the Cloud Big Data service requires the inclusion of a specific 
-authorization token, supplied in the ``X-Auth-Token`` HTTP header of each API request. 
-You get a token by submitting an authentication request with valid account credentials to 
+Each REST request against the Cloud Big Data service requires the inclusion of a specific
+authorization token, supplied in the ``X-Auth-Token`` HTTP header of each API request.
+You get a token by submitting an authentication request with valid account credentials to
 the following Rackspace Cloud Identity API service endpoint:
 
 .. code::
-     
+
        https://identity.api.rackspacecloud.com/v2.0
 
 For details see the following information:
 
 - :ref:`Authenticate to the Rackspace Cloud<authenticate-to-cloud>`
-- :rax-devdocs:`Rackspace Cloud Identity API developer documentation 
+- :rax-devdocs:`Rackspace Cloud Identity API developer documentation
   <cloud-identity/v2/developer-guide/>`
 
 
 ````
+Make sure you also update your `conf.py` file with the following:
 
+Add the `common-gs` folder to the `exlude_patterns`:
+
+exclude_patterns = ['_build', 'samples', 'api-operations/methods*', 'common-gs']
+
+Add the `apiservice` shortcut the `rst_epilog`:
+
+rst_epilog = """
+.. |apiservice| replace:: Rackspace Cloud Servers API
+.. |no changes| replace:: None for this release
+.. |contract version| replace:: 2.0
+.. |product name| replace:: Rackspace Cloud Servers
+"""
+
+.. note::
+   Make sure to replace **Rackspace Cloud Servers** with your product name.
+
+Also, after updating the `authentication.rst` file in the General API info
+section, be sure to fix the reference in `service-access-endpoints.rst`, also
+in the General API info section.
+
+The reference is in the paragraph following the endpoint table, and it should
+be changed to:
+
+In your authentication response (see :ref:`authentication-ovw`),
+it is listed as InternalURL.
