@@ -105,7 +105,11 @@ For details see the following information:
 
 Add the `common-gs` folder to the `exlude_patterns`. For example:
 
+````
+
 exclude_patterns = ['_build', 'samples', 'api-operations/methods*', 'common-gs']
+
+````
 
 Add the `apiservice` shortcut the `rst_epilog`. For example:
 
@@ -129,5 +133,8 @@ in the General API info section.
 The reference is in the paragraph following the endpoint table, and it should
 be changed to:
 
+````
 In your authentication response (see :ref:`authentication-ovw`),
 it is listed as InternalURL.
+
+````
