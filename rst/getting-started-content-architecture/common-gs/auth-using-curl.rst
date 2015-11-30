@@ -104,10 +104,6 @@ create an ``API_ENDPOINT`` variable to store the URL for accessing an API servic
 To reference the value in an API request, prefix the variable name with a $, for example 
 ``$API_ENDPOINT``.
 
-.. code::
-
-    export 
-
 .. include:: ../common-gs/using-env-variables.rst
 		   
 **Create environment variables**
