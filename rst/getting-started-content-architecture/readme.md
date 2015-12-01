@@ -1,7 +1,7 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Apply Getting Started Guide template to migrated content](#)
-	- [Content architecture and description](#apply-getting-started-guide-template-to-migrated-content)
+- [Apply Getting Started Guide template to migrated content](#apply-getting-started-guide-template-to-migrated-content)
+	- [Content architecture and description](#content-architecture-and-description)
 	- [Update Authentication section in General API Info section](#update-authentication-section-in-general-api-info-section)
 	- [Update your conf.py file](#update-your-confpy-file)
 	- [Integrate use cases](#integrate-use-cases)
