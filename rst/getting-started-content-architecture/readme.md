@@ -1,3 +1,12 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Content architecture and description](#)
+- [Update Authentication section in General API Info section](#)
+- [Update your conf.py file](#)
+- [Integrate use cases](#)
+
+#Apply Getting Started Guide template to migrated content
+
 This content architecture is a template for the beginning sections of a Getting Started Guide:
 
 - Getting Started Guide overview
