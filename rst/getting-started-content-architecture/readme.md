@@ -157,7 +157,7 @@ it is listed as InternalURL.
 
 ##Integrate use cases
 
-Integrate your use cases into the Getting Started Guide by adding them at the same level (H1) as the **Prerequisites*, *Send API requests*, *Authenticatee*  Nest use case example topics under the intro topic(s). 
+Integrate your use cases into the Getting Started Guide by adding them at the same level (H1) as the **Prerequisites*, *Send API requests*, *Authenticate*. Then, nest the use case example topics under the intro topic(s). 
 
 Like most things with Sphinx, you can create this architecture in different ways. 
 
