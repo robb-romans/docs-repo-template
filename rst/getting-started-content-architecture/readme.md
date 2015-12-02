@@ -157,13 +157,13 @@ it is listed as InternalURL.
 
 ##Integrate use cases
 
-Integrate your use cases into the Getting Started Guide by adding them at the same level (H1) as the **Prerequisites*, *Send API requests*, *Authenticate*. Then, nest the use case example topics under the intro topic(s). 
+Integrate use cases into the Getting Started Guide by adding a use case intro topic(s) at the same level (H1) as the **Prerequisites*, *Send API requests*, and *Authenticate* sections. Then, nest the use case examples under the intro topic(s). 
 
 Like most things with Sphinx, you can create this architecture in different ways. 
 
 For example, if your guide shows examples for basic operations, add an H1 intro topic for the use cases, and then use the include directive to nest the use case examples under the H1 header.  See [Cloud Queues](https://developer.rackspace.com/docs/cloud-queues/v1/developer-guide/#document-getting-started)  for an example.
 
-Here is one way of creating this structure: 
+To follow the Cloud Queues use case example, complete these tasks: 
 
 * In the getting-started folder, create a use case overview topic, for example   [using-cloud-queues.rst(https://github.com/rackerlabs/docs-cloud-queues/blob/master/api-docs/getting-started/using-cloud-queues.rst)
 
