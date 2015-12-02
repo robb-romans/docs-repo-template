@@ -5,6 +5,7 @@
 	- [Update Authentication section in General API Info section](#update-authentication-section-in-general-api-info-section)
 	- [Update your conf.py file](#update-your-confpy-file)
 	- [Integrate use cases](#integrate-use-cases)
+	- [Use environment variables in use case examples](#use-the-environment-variables-in-use-case-examples)
 
 #Apply Getting Started Guide template to migrated content
 
@@ -156,13 +157,59 @@ it is listed as InternalURL.
 
 ##Integrate use cases
 
-Integrate your use cases into this architecture by adding an H1 topic to introduce them. This structure keeps the major
-headings at the same levels as *Prerequsities*, *Send API requests*, and so on. For example, if your 
-guide shows examples for basic operations, add an H1 intro topic for the use cases, and then include the example topics 
-in the intro topic. See [Cloud Queues](https://developer.rackspace.com/docs/cloud-queues/v1/developer-guide/#document-getting-started)  for an example.
+Integrate your use cases into the Getting Started Guide by adding them at the same level (H1) as the **Prerequisites*, *Send API requests*, *Authenticatee*  Nest use case example topics under the intro topic(s). 
 
-Also, note that we want to use the environment variables created in the common authentication topic in the examples. For the Cloud Queues product, I added the following note to the Use case intro topic:
+Like most things with Sphinx, you can create this architecture in different ways. 
 
+For example, if your guide shows examples for basic operations, add an H1 intro topic for the use cases, and then use the include directive to nest the use case examples under the H1 header.  See [Cloud Queues](https://developer.rackspace.com/docs/cloud-queues/v1/developer-guide/#document-getting-started)  for an example.
+
+Here is one way of creating this structure: 
+
+* In the getting-started folder, create a use case overview topic, for example   [using-cloud-queues.rst(https://github.com/rackerlabs/docs-cloud-queues/blob/master/api-docs/getting-started/using-cloud-queues.rst)
+
+* In the getting-started folder, add an ``examples`` folder and move all of the use case example files into that folder. 
+
+* In the use case intro topic, use the ``include`` directive to add all of the examples.
+
+  ```
+     .. include:: examples/gs-create-queue.rst
+     .. include:: examples/gs-post-message.rst
+     .. include:: examples/gs-claim-messages.rst
+     .. include:: examples/gs-delete-message.rst
+     .. include:: examples/gs-release-claim.rst
+     .. include:: examples/gs-delete-queue.rst
+  ```
+
+* To prevent Sphinx duplicate label build errors, add the ``examples`` folder to the conf.py ``excludes`` specification.  
+
+   ```
+      exclude_patterns = ['_build', 'samples', 'api-operations/methods*', 'common-gs', 'getting-started/examples']
+  
+   ```
+
+After making these changes, the Sphinx project Getting Started directory has the following structure: 
+
+```
+	├── getting-started
+	│   ├── authenticate.rst
+	│   ├── examples                    New folder that contains the use case example files.
+	│   │   ├── gs-claim-messages.rst   Use case examples converted from DocBook source.
+	│   │   ├── gs-create-queue.rst
+	│   │   ├── gs-delete-message.rst
+	│   │   ├── gs-delete-queue.rst
+	│   │   ├── gs-post-message.rst
+	│   │   └── gs-release-claim.rst
+	│   ├── index.rst
+	│   ├── prerequisites-for-using-api.rst
+	│   ├── send-request-ovw.rst
+	│   └── using-cloud-queues.rst      New introductory topic for the use cases.
+	
+```
+
+##Use the environment variables in use case examples
+
+The common authentication topics have a section to create environment variables. Use these variables in the use case examples, and 
+add the following note to the Use Case intro topic. 
 ````
 .. note:: 
      These examples use the ``$API_ENDPOINT``, ``$AUTH_TOKEN``, and ``$TENANT_ID`` environment 
@@ -172,4 +219,4 @@ Also, note that we want to use the environment variables created in the common a
      code samples. 
      
 ````
-Then, I replaced the values in the examples to use the environment variables. 
+In the use case examples, replace the endpoint, auth-token, and tenant-id values or variables with the common environment variables. 
