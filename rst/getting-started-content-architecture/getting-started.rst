@@ -9,6 +9,8 @@ by using the Cloud Big Data API. You'll learn how to authenticate, send API requ
 and complete the basic operations for using the Cloud Big Data API by using the cURL 
 and the Lava client command line tools.
 
+For additional details about all of the API operations, see the :ref:`API reference<api-reference>`.
+
 .. note:: 
 		You can also access |apiservice| features from the `Rackspace Cloud Control Panel`_.
 
