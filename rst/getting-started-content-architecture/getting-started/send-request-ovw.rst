@@ -1,6 +1,6 @@
 .. _send-api-requests:
 
-Sending API requests to Cloud Big Data 
+Send API requests to Cloud Big Data 
 ----------------------------------------
 
 .. contents::
