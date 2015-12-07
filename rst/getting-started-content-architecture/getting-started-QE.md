@@ -1,14 +1,15 @@
 ##Content architecture check
 
 **Getting Started navigation**
-  - [ ]  Link at top of doc
+
+- [ ] Link at top of doc
   
-          ![Part links](https://github.com/rackerlabs/docs-common/blob/master/rst/getting-started-content-architecture/QE-images/GS-part-links.png)
+      ![Part links](https://github.com/rackerlabs/docs-common/blob/master/rst/getting-started-content-architecture/QE-images/GS-part-links.png)
   
-  - [ ]  Content hierarchy for top-sections looks like one of these two models, with GS title in nav
+- [ ] Content hierarchy for top-sections looks like one of these two models, with GS title in nav
   
-         ![Nav with curl](https://github.com/rackerlabs/docs-common/blob/master/rst/getting-started-content-architecture/QE-images/GS-nav-curl-only.png) 
-         ![Nav with curl](https://github.com/rackerlabs/docs-common/blob/master/rst/getting-started-content-architecture/QE-images/GS-nav-with-client.png) 
+      ![Nav with curl](https://github.com/rackerlabs/docs-common/blob/master/rst/getting-started-content-architecture/QE-images/GS-nav-curl-only.png) 
+      ![Nav with curl](https://github.com/rackerlabs/docs-common/blob/master/rst/getting-started-content-architecture/QE-images/GS-nav-with-client.png) 
 
 ##Content check
 
