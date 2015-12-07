@@ -1,0 +1,13 @@
+.. Add this note to the General API information >> Service access endpoints topic:
+
+
+Replace the ``$TENANT_ID`` with your Rackspace Cloud account number. 
+
+..  note:: 
+
+      You can find the complete URI to access the |apiservice| which includes 
+      your account number in the service catalog returned in the 
+      :ref:`authentication response <review-auth-resp>`. Search 
+      the catalog for the service type, |servicetype|. Then, copy the URI from the 
+      *publicURL* field included in the service information. 
+      Select the URL for the region that you want to use. 
