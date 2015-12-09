@@ -1,4 +1,4 @@
-.. Add this note to the General API information >> Service access endpoints topic
+.. Add this note to the General API information >> Service access endpoints topic, under the list of endpoints.
 .. For the servicetype value, enter the service type value from the service catalog, for example rax:databases.
 .. Because the service type has the : symbol in it -- you cannot use a substitution variable. Looking for workaround.
 
