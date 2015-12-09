@@ -1,13 +1,13 @@
-.. Add this note to the General API information >> Service access endpoints topic:
+.. Add this note to the General API information >> Service access endpoints topic, under the list of endpoints.
+.. For the servicetype value, enter the service type value from the service catalog, for example rax:databases.
+.. Because the service type has the : symbol in it -- you cannot use a substitution variable. Looking for workaround.
 
 
 Replace the ``$TENANT_ID`` with your Rackspace Cloud account number. 
 
 ..  note:: 
 
-      You can find the complete URI to access the |apiservice| which includes 
-      your account number in the service catalog returned in the 
+      You can find the complete URI, with your account number appended in the service catalog that is returned in the  
       :ref:`authentication response <review-auth-resp>`. Search 
       the catalog for the service type, |servicetype|. Then, copy the URI from the 
-      *publicURL* field included in the service information. 
-      Select the URL for the region that you want to use. 
+      *publicURL* field for the region you want to use.
