@@ -3,6 +3,10 @@
 Glossary
 ========
 
+*Last updated:* |today|
+
+Use this glossary to get definitions of Rackspace-related words and phrases. 
+
 .. glossary::
 
    account
@@ -695,7 +699,8 @@ Glossary
       be nested in a container.
 
    public container
-      *(Cloud Files)* A :term:`CDN-enabled container` that is publicly accessible.
+      *(Cloud Files)* A :term:`CDN-enabled <CDN-enabled container>` that is publicly 
+      accessible.
 
    public URL
       A URL that is accessible from anywhere. Access to a public URL
