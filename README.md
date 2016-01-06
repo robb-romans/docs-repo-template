@@ -1,5 +1,7 @@
-docs-common
-===========
+Rackspace common documentation resources
+=========================================
+
+[![Build Status](https://travis-ci.org/rackerlabs/docs-common.svg?branch=master)](https://travis-ci.org/rackerlabs/docs-common)
 
 This repo contains non-product-specific doc source for fragments to be included within multiple documents at http://docs.rackspace.com.
 
