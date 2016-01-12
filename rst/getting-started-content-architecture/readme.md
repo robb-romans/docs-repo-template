@@ -28,7 +28,7 @@ Getting Started Guide intro architecture:
 The following tree structure describes the RST source, code samples, and image files
 in the template for the Getting Started content architecture.
 
-````
+```
 
 ├── common-gs                             Common files for Getting Started module
 │   │

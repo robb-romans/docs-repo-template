@@ -3,13 +3,18 @@ Rackspace common documentation resources
 
 [![Build Status](https://travis-ci.org/rackerlabs/docs-common.svg?branch=master)](https://travis-ci.org/rackerlabs/docs-common)
 
-This repo contains non-product-specific doc source for fragments to be included within multiple documents at http://docs.rackspace.com.
+This repo contains common documentation source content for content delivered to developer.rackspace.com. 
 
-*Nothing here is meant to be publishable on its own.*
 
-When you add a fragment, add a note in this README describing its intended use.
+When you add content, add a note in this README describing its intended use.
 Add the most recent note to the top of the list.
 
+
+----
+2016-01-04
+
+Added build files and Sphinx project for Rackspace common glossary in the glossary folder. 
+Glossary and source are deployed to developer.rackspace.com/docs/glossary.html.
 
 ----
 2014-11-10 added by Cat Lookabaugh
