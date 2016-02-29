@@ -31,7 +31,7 @@ If your credentials are valid, the Identity service returns an authentication re
 that includes the following information:
 
 - An authentication token
-- A service catalog with information about the services that you can access.
+- A service catalog with information about the services that you can access
 - User information and role assignments
 
 .. note:: 
@@ -126,7 +126,7 @@ for example ``ENDPOINT``.
 
 #. Export the token ID to an environment variable
    that can be supplied in the ``X-Auth-Token`` header required in each
-   API request.  Replace *token-id* with the authentication token ``id`` value returned
+   API request.  Replace ``token-id`` with the authentication ``token id`` value returned
    in the authentication response.
 
    .. code::
@@ -136,7 +136,7 @@ for example ``ENDPOINT``.
 
 #. Export the tenant ID to an environment variable
    that can be supplied in requests that require you to specify a tenant ID or tenant name.
-   Replace *tenant-id* with the authentication token ``tenant id`` value returned
+   Replace ``tenant-id`` with the authentication token ``tenant id`` value returned
    in the authentication response.
 
    .. code::
@@ -157,8 +157,8 @@ for example ``ENDPOINT``.
         URL with the tenant ID for your account appended after the ``/``. 
 
 
-#. Export the URL to an environment variable, as shown in the following example. Replace 
-   Replace *publicURL* with the ``publicURL`` value listed in the service catalog.
+#. Export the URL to an environment variable, as shown in the following example.  
+   Replace ``publicURL`` with the ``publicURL`` value listed in the service catalog.
 
    .. code::
 
