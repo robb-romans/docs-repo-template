@@ -20,13 +20,13 @@ Then, select **Account Settings** to open the page.
 Save your API key
 ^^^^^^^^^^^^^^^^^^
 
-#. On the Account Settings page, find the API Key in the **Login Details** section.
+#. On the Account Settings page, find the **API Key** in the **Login Details** section.
 #. Click **Show** to see the value and copy it to a text editor of your choice.
 #. Click **Hide** to secure the API key value in the browser.
 
 .. important::
       Protect your API key. Do not expose the value in code samples, screen captures, or
-      insecure client-server communications. Also, make sure that the value is not
+      insecure client-server communications. Also, ensure that the value is not
       included in source code that is stored in public repositories.
 
 Save your account number
