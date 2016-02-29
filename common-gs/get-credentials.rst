@@ -3,9 +3,9 @@
 Get your credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To communicate with Rackspace Cloud services by using the REST API, you need your
-+Rackspace Cloud account username, API key, and account number. To get this 
-+information, log in to the `Cloud Control Panel`_.
+To communicate with Rackspace Cloud services by using the REST API, you need your 
+Rackspace Cloud account username, API key, and account number. To get this 
+information, log in to the `Cloud Control Panel`_.
 
 .. note::
      In the API service documentation, the account number is referred to as your 
