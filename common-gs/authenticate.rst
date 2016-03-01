@@ -1,3 +1,5 @@
+.. This is the intro to authenticate topic for API docs that have a Getting Started, move this file to the getting-started folder.
+
 .. _authentication:
 
 Authenticate to the Rackspace Cloud
