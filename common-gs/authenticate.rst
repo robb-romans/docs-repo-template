@@ -9,7 +9,7 @@ header of each API request.
 
 With a valid token, you can send API requests to any of the API service endpoints that 
 you are authorized to use. The authentication response includes a token expiration date. 
-When a token expeires, you can send another authentication request to get a new one. 
+When a token expires, you can send another authentication request to get a new one. 
 
 
 .. note::
