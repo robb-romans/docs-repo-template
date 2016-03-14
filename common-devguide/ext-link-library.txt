@@ -1,0 +1,29 @@
+# External link library
+# This is the common extlink library definition list for the Rackspace Cloud product  
+# documentation.  Copy the content to the conf.py for the Sphinx documentation 
+# projects. Some products might have customized the extlink library. Be careful when 
+# overwriting the existing definitions in a conf.py to avoid removing 
+# any custom link definitions.
+
+# For information about using the external link definitions, see https://github.com/rackerlabs/docs-migration/tree/master/docs.
+
+extlinks = {
+    'rax': ('http://www.rackspace.com/%s', ''),
+    'rax-cloud': ('http://www.rackspace.com/cloud/%s', ''),
+    'rax-dev': ('https://developer.rackspace.com/%s', ''),
+    'rax-devdocs': ('http://developer.rackspace.com/docs/%s', ''),
+    'rax-devguide':('http:/developer.rackspace.com/docs/%s/developer-guide/',''),
+    'rax-api': ('http:/developer.rackspace.com/docs/%s/developer-guide/#api-reference',''),
+    'rax-git': ('https://github.com/rackspace/%s', ''),
+    'rax-glossary': ('https://developer.rackspace.com/docs/glossary/%s', ''),
+    'mycloud': ('https://mycloud.rackspace.com/%s', ''),
+    'how-to': ('http://support.rackspace.com/how-to/%s', ''),
+    'os': ('http://www.openstack.org/%s', ''),
+    'os-docs': ('http://docs.openstack.org/%s', ''),
+    'os-wiki': ('http://wiki.openstack.org/%s', ''),
+    'git-repo': ('https://github.com/rackerlabs/%s',''),
+    'rackerlabs': ('https://github.com/rackerlabs/%s', ''),
+    'rocket': ('https://objectrocket.com/%s', ''),
+
+}
+

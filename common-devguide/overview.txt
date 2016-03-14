@@ -1,6 +1,7 @@
-.. The overview is the common content replacement for the preface. When docs are delivered on the web and users can arrive on any page, "preface" isn't really a meaningful idea.
+.. The overview is the common content replacement for the preface. When docs are delivered 
+.. on the web and users can arrive on any page, "preface" isn't really a meaningful idea.
 
-.. _common-dg-overview:
+.. _overview:
 
 ========
 Overview
@@ -29,7 +30,7 @@ See the following resources for more information about $productName:
 
 .. include:: product-specific-resources.txt
 
-- Articles about $productName on the `Knowledge Center`_
+- Articles about $productName in the :how-to:`Rackspace Support How To collection<>` 
 
 - `Rackspace Community forum`_
 
@@ -38,23 +39,9 @@ See the following resources for more information about $productName:
 - `Follow Rackspace on Twitter`_
 
 .. _Follow Rackspace on Twitter: http://www.twitter.com/Rackspace
-.. _Knowledge Center: http://www.rackspace.com/knowledge_center/
 .. _Community forums: https://community.rackspace.com/
 .. _Product Feedback forum: https://feedback.rackspace.com/
 
-.. _common-dg-overview-pricingsla:
-
-Pricing and service terms
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: product-specific-sla.txt
-
-.. _common-dg-overview-dochist:
-
-Document change history
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: product-specific-doc-change-history.txt
 
 .. _common-dg-overview-apicontractchanges:
 
