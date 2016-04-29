@@ -1,7 +1,6 @@
 Rackspace common documentation resources
 =========================================
 
-
 This repo contains common documentation source content for content delivered to developer.rackspace.com. 
 
 
