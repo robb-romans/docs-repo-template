@@ -1,17 +1,27 @@
 .. _getting-started:
 
-==========================
-**Getting Started Guide**
-==========================
+===============
+Getting started
+===============
 
-Use this Getting Started Guide  to learn how to authenticate, send API requests, set up 
-the command line interface, and complete basic operations by using the 
+Use the following information to learn how to authenticate, send API requests, and complete basic operations by using the 
 |product name|.
 
-For more information about |product name| concepts and API operations, 
-see the :ref:`Developer Guide<developer-guide>` and the :ref:`API reference<api-reference>`.
+.. toctree::
+  :maxdepth: 1
+  
+  get-credentials-include
+  send-request-ovw
+  authenticate
+  concepts
+  
+.. comment: Also add an entry to the "getting started" topics for using the service (for example, "Create and manage load balancers")
+  
+To start using the API and run the examples in this section, you need the following items:
 
-.. note:: 
-		You can also access |apiservice| features from the `Rackspace Cloud Control Panel`_.
+- Rackspace Cloud account. If you don't have an account, `sign up`_ for one.
+- :ref:`Command line tool or browser client <send-api-requests>` for communicating with the API service.
 
-.. _Rackspace Cloud Control Panel: https://mycloud.rackspace.com  
+.. comment: link reference
+
+.. _sign up: https://cart.rackspace.com/cloud/
