@@ -14,8 +14,9 @@ Use the following information to learn how to authenticate, send API requests, a
   send-request-ovw
   authenticate
   concepts
+  getting-started
   
-.. comment: Also add an entry to the "getting started" topics for using the service (for example, "Create and manage load balancers")
+.. comment: The last entry in the toctree should point to the "getting started" topics for using the service (for example, "Create and manage load balancers")
   
 To start using the API and run the examples in this section, you need the following items:
 
