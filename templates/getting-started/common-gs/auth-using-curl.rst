@@ -34,9 +34,9 @@ that includes the following information:
 - A service catalog with information about the services that you can access
 - User information and role assignments
 
-.. note:: 
-     For detailed information about the authentication response, see 
-     :rax-devdocs:`Annotated authentication request and response<cloud-identity/v2/developer-guide/#document-authentication-info/sample-auth-req-response>` 
+.. note::
+     For detailed information about the authentication response, see
+     :rax-devdocs:`Annotated authentication request and response<cloud-identity/v2/developer-guide/#document-authentication-info/sample-auth-req-response>`
      in the Rackspace Cloud Identity documentation.
 
 
@@ -51,28 +51,28 @@ returned is specific to your account.
 
 
 If the request was successful, you can find the authentication token and other information in the
-authentication response. You'll need these values to submit requests to the API. See
+authentication response. You need these values to submit requests to the API. See
 :ref:`Configure environment variables<configure-environment-variables>`.
 
 If the request failed, review the response message and
 the following error message descriptions to determine next steps.
 
-If you see the following message, review the authentication request for syntax or coding 
+If you see the following message, review the authentication request for syntax or coding
 errors. If you are using cURL, see the section on :ref:`using cURL <how-curl-commands-work>`.
 
-.. code:: 
+.. code::
 
    400 Invalid request body: unable to parse Auth data. Please review XML or JSON formatting
 
 If you see the following message, verify the authentication credentials
 submitted in the authentication request. If necessary, contact your Rackspace Cloud Administrator or
-Rackspace Support to get valid credentials. 
+Rackspace Support to get valid credentials.
 
 .. code::
 
    401 Unable to authenticate user with credentials provided.
-   
-   
+
+
 ..  note::
        For more information about authentication and authorization errors, see the
        :rax-devdocs:`Cloud Identity API Reference documentation <cloud-identity/v2/developer-guide/#document-api-operations/token-operations>`.
@@ -103,15 +103,15 @@ tenant ID
     tenant ID is appended to the API endpoint in the service catalog automatically. You
 
 endpoints
-	 The endpoints object provides the URLs that you can use to access the API service. 
+	 The endpoints object provides the URLs that you can use to access the API service.
 	 For guidance on choosing an endpoint, see :ref:`Service access<service-access-endpoints>`.
 
 
-To make it easier to include these and other values in API requests, use the ``export`` 
-command to create environment variables that can be substituted for the actual values. 
-For example, you can create an ``API_ENDPOINT`` variable to store the URL for accessing 
-an API service. To reference the value in an API request, prefix the variable name with a $, 
-for example ``ENDPOINT``.
+To make it easier to include these and other values in API requests, use the ``export``
+command to create environment variables that can be substituted for the actual values.
+For example, you can create an ``API_ENDPOINT`` variable to store the URL for accessing
+an API service. To reference the value in an API request, prefix the variable name with a ``$``,
+for example ``$ENDPOINT``.
 
 
 .. include:: ../common-gs/using-env-variables.rst
@@ -119,7 +119,7 @@ for example ``ENDPOINT``.
 **Create environment variables**
 
 #. In the ``token`` section of the authentication response, copy the token ``id`` and
-   tenant ``id`` values from the token object. The following example shows example values 
+   tenant ``id`` values from the token object. The following example shows example values
    only.
 
       .. include:: ../common-gs/samples/auth-token-object.rst
@@ -150,19 +150,16 @@ for example ``ENDPOINT``.
    The following example shows the endpoint available for the |apiservice|.
 
    .. include:: ../common-gs/samples/service-catalog-endpoint.rst
-   
-   
-   .. note:: 
-        For some services, the ``publicURL`` value for |apiservice| consists of the service access endpoint 
-        URL with the tenant ID for your account appended after the ``/``. 
 
 
-#. Export the URL to an environment variable, as shown in the following example.  
+   .. note::
+        For some services, the ``publicURL`` value for |apiservice| consists of the service access endpoint
+        URL with the tenant ID for your account appended after the ``/``.
+
+
+#. Export the URL to an environment variable, as shown in the following example.
    Replace ``publicURL`` with the ``publicURL`` value listed in the service catalog.
 
    .. code::
 
         $ export ENDPOINT="publicURL"
-
-
-
