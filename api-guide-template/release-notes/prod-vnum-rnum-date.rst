@@ -1,6 +1,6 @@
-.. version-v#.r#-release-notes:
+.. version-vnum.rnum-release-notes:
 
-v#.r#, Month dd, yyyy
+Example title - <vnum.rnum, Month dd, yyyy>
 ----------------------------------------------
 
 What's new

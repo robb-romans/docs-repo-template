@@ -8,7 +8,7 @@ Use the following information to learn how to authenticate, send API requests,
 and complete basic operations by using the |apiservice|.
 
 .. COMMENT - replace the using-cloud-load-balancers topic with relevant content
-.. To include CLI instructions, add topics or content for auth, requests, \
+.. To include CLI instructions, add topics or content for CLI auth, requests, \
    and user
 
 .. toctree::

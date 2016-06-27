@@ -1,6 +1,6 @@
 .. _update-an-image:
 
-Exam[e http request topic - Update an image
+Example http request topic - Update an image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
