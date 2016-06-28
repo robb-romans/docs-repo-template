@@ -133,8 +133,8 @@ Convert cURL examples to run on Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The cURL examples in the Rackspace API documentation use syntax supported
-on Linux and UNIX systems. Microsoft Windows does not support the same format.
-However, you can run the examples after making the following changes:
+on Mac OS® X, Linux and UNIX systems. Microsoft Windows does not support
+the same format. However, you can run the examples after making the following changes:
 
 - Replace all the line continuation backslash characters (``\``) with a caret (``^``), and remove any trailing spaces after
   the ``^``.
