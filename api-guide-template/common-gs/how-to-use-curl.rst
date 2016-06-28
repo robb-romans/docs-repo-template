@@ -7,13 +7,12 @@ distributions, Mac OS® X, and Microsoft Windows®. For information about cURL, 
 `http://curl.haxx.se/ <http://curl.haxx.se/>`__.
 
 To run the cURL request examples shown in this guide on Mac OS® X or another
-linux-based operating system, copy each example directly to the command line or a script.
+Linux-based operating system, copy each example directly to the command line or a script.
 
 .. note::
 
-   If you are on Microsoft Windows®, you need to make adjustments to the cURL examples in
-   order to run them. See
-   :ref:`Convert cURL examples to run on Windows :ref:`<convert-cURL-examples-for-windows>`
+   If you are using Microsoft Windows, you need to adjust the cURL examples to run them. See
+   :ref:`Convert cURL examples to run on Windows :ref:`<convert-cURL-examples-for-windows>`.
 
 
 .. _auth-curl-json:
@@ -119,10 +118,7 @@ If you do not want to pretty-print JSON output, omit this code.
 
 .. note::
 
-   Do not try to pretty print the output, if your request includes the
-   cURL ``-i`` option to show header output. Header information is not in JSON format, and
-   the API service will return an error.
-
+   If your request includes the ``-i`` option to show header output, do not try to pretty-print the output. Header information is not in JSON format, and the API service returns an error if you specify json.tool.
 
 .. _json encoder and decoder: http://docs.python.org/2/library/json.html
 .. _simplejson encoder and decoder: http://simplejson.googlecode.com/svn/tags/simplejson-2.0.9/docs/index.html
@@ -133,36 +129,32 @@ If you do not want to pretty-print JSON output, omit this code.
 
 .. _convert-cURL-examples-for-windows:
 
-Convert cURL examples to run on  Windows
+Convert cURL examples to run on Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The cURL examples in the Rackspace developer documentation use syntax supported
-on Linux- and Unix-based systems. Microsoft Windows® does not support the same format.
-However, you can run them after making the following changes:
+The cURL examples in the Rackspace API documentation use syntax supported
+on Mac OS® X, Linux and UNIX systems. Microsoft Windows does not support
+the same format. However, you can run the examples after making the following changes:
 
-- Replace all line continuation backslash characters (``\``) at the end of a line
-  with a caret (``^``) and remove any trailing spaces after
-  the ``^`` as shown in the following example:
+- Replace all the line continuation backslash characters (``\``) with a caret (``^``), and remove any trailing spaces after
+  the ``^``.
 
-  .. code::
+- If an example includes JSON data, export the data to a text file. When you run the cURL command, use the ``@filename`` syntax to import the JSON data. Save the JSON data files in a directory, and run cURL commands from that directory.
+  
+The following example shows the format for Linux and UNIX systems:
+  
+.. code::
 
-     $ curl https://identity.api.rackspacecloud.com/v2.0/tokens  ^
-           -X POST ^
-           -d '{"auth":{"passwordCredentials":{"username":"yourUserName",^
-                "password":"yourPassword"}}}' ^
-           -H "Content-type: application/json"
+      $ curl https://identity.api.rackspacecloud.com/v2.0/tokens  \
+            -X POST \
+            -d '{"auth":{"RAX-KSKEY:apiKeyCredentials":{"username":"yourUserName","apiKey":"$apiKey"}}}' \
+            -H "Content-type: application/json"
+	   
+The following example shows the same request with the changes made for Windows systems:
 
-- If an example includes JSON data, export the data to a text file. When you run the
-  cURL command, use the ``@filename`` syntax to import the JSON data as shown in
-  the following example:
-
-
-  .. code::
+.. code::
 
      $ curl https://identity.api.rackspacecloud.com/v2.0/tokens  ^
            -X POST ^
            -d @credentials.txt  ^
            -H "Content-type: application/json"
-
-
-  Save the JSON data files in a directory and run cURL commands from that directory.
