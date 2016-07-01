@@ -1,0 +1,8 @@
+{
+  "contentIDBase": "https://github.com/rackerlabs/docs-common/",
+  "githubUrl": "https://github.com/rackerlabs/docs-common/",
+  "githubBranch": "master",
+  "meta": {
+    "preferGithubIssues": false
+  }
+}

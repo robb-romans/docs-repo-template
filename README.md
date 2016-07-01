@@ -1,13 +1,16 @@
 Rackspace common documentation resources
 =========================================
 
-[![Build Status](https://travis-ci.org/rackerlabs/docs-common.svg?branch=master)](https://travis-ci.org/rackerlabs/docs-common)
-
 This repo contains common documentation source content for content delivered to developer.rackspace.com. 
 
 
 When you add content, add a note in this README describing its intended use.
 Add the most recent note to the top of the list.
+
+2016-04-11
+
+Moved glossary source and build to docs-rackspace. 
+Disabled Travis build.
 
 
 ----
