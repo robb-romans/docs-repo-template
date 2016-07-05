@@ -12,7 +12,7 @@ Linux-based operating system, copy each example directly to the command line or 
 .. note::
 
    If you are using Microsoft Windows, you need to adjust the cURL examples to run them. See
-   :ref:`Convert cURL examples to run on Windows :ref:`<convert-cURL-examples-for-windows>`.
+   :ref:`Convert cURL examples to run on Windows <convert-cURL-examples-for-windows>`.
 
 
 .. _auth-curl-json:
@@ -70,7 +70,7 @@ The cURL examples in this guide use the following command-line options.
 
        - ``X-Auth-Project-Id``: Optional. Specifies the project ID,
          which can be your account number or another value.
-         
+
 
        - ``Accept``: Optional. Specifies the format of the response
          body.
@@ -140,16 +140,16 @@ the same format. However, you can run the examples after making the following ch
   the ``^``.
 
 - If an example includes JSON data, export the data to a text file. When you run the cURL command, use the ``@filename`` syntax to import the JSON data. Save the JSON data files in a directory, and run cURL commands from that directory.
-  
+
 The following example shows the format for Linux and UNIX systems:
-  
+
 .. code::
 
       $ curl https://identity.api.rackspacecloud.com/v2.0/tokens  \
             -X POST \
             -d '{"auth":{"RAX-KSKEY:apiKeyCredentials":{"username":"yourUserName","apiKey":"$apiKey"}}}' \
             -H "Content-type: application/json"
-	   
+
 The following example shows the same request with the changes made for Windows systems:
 
 .. code::
