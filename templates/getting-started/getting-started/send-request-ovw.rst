@@ -24,7 +24,7 @@ To learn about other ways to use Rackspace Cloud API services, see the following
 .. include:: ../common-gs/using-client.rst
 
 .. _cURL command line tool: http://curl.haxx.se/
-.. _Rackspace SDKs: https://developer.rackspace.com/sdks/
+.. _Rackspace SDKs: https://developer.rackspace.com/docs/#sdks
 .. _Rackspace CLI: https://developer.rackspace.com/docs/rack-cli/
 .. _Openstack client applications: https://wiki.openstack.org/wiki/OpenStackClients
 .. _Postman: http://www.getpostman.com
