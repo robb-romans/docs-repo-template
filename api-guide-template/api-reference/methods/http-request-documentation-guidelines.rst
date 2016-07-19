@@ -1,18 +1,19 @@
 HTTP request documentation guidelines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This document provides guidelines for documenting a single HTTP
-request (for example,  ``GET /v2.0/servers``). It provides the topic
+This section provides guidelines for documenting a single HTTP
+request (for example, ``GET /v2.0/servers``). It provides the topic
 structure and guidelines for content and style within each section.
 
 .. note::
 
-     Headings in parentheses indicate parts of the model that will not have a
+     Headings in parentheses indicate parts of the section that do not have a
      heading in the template. For an example of the template with content that
-     following these guidelines, see <link to example>.
+     following these guidelines, see
+     :ref:`Example http request topic <update-an-image>`.
 
 Title
-^^^^^^^
+-----
 
 Begin the title with an imperative verb. In general, the following methods
 equate to the following verbs:
@@ -27,11 +28,11 @@ Guidelines:
 - Insert articles to make the title more readable. For example, "Create a
   server" rather than "Create server."
 - Use sentence-style capitalization.
-- Ensure that the title is unique within a given set of documentation. Duplicate
-  titles adversely affect linking.
+- Ensure that the title is unique within a given set of documentation.
+  Duplicate titles adversely affect linking.
 
 (route)
-^^^^^^^^^
+-------
 
 Immediately following the title, show the URI in a code block (no label).
 Following are some examples:
@@ -59,27 +60,27 @@ Guidelines:
     capitalize the first word. For example, ``{projectId}``.
 
 (introduction with brief description)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 Follow the URI code block with a description (no heading). Start with "This
 operation …"
 
 Include only necessary information that applies to the operation as a whole.
-Specific information about a parameter should go in the parameter table. If it
-is too much information for the table, place it in a "parameter details" section
-following the parameter tables.
+Specific information about a parameter should go in the parameter table. If
+there  is more parameter information than can be shown in the table, place it
+in a  "parameter details" section following the introduction.
 
 (parameter details)
-^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Optionally, follow the introduction with details about one or more parameters.
-Parameter descriptions belong in the parameters tables (see those sections), but
-those tables are not designed to contain multiple paragraphs and extended
-details.  If you have details to provide that require extra paragraphs or lists,
-use this part of the section.
+Parameter descriptions belong in the parameters tables (see those sections),
+but those tables are not designed to contain multiple paragraphs and extended
+details. If you have details to provide that require extra paragraphs or
+lists, use this part of the section.
 
 Request parameters
-^^^^^^^^^^^^^^^^^^^^^^
+------------------
 
 This is the first main section and heading after the title. Use the title
 "Request parameters."
@@ -90,12 +91,12 @@ parameters, as needed. Precede each table with a basic introduction, such as
 
 Parameter tables include the following columns:
 
-- **Name**: Show parameters in regular font, with no surrounding braces (for URI
-  placeholders). If it is a subparameter, show its parent parameter, too, and
-  bold the subparameter. For example, network. **name**.
+- **Name**: Show parameters in regular font, with no surrounding braces
+  (for URI placeholders). If it is a subparameter, show its parent parameter,
+  too, and bold the subparameter. For example, network. **name**.
 
-- **Type**: Use the full word, with initial an capital. For example: String,
-  Boolean
+- **Type**: Use the full word, with initial an capital. For example:
+  String, Boolean
 
 - **Description**: Provide meaningful information about the parameter; don't
   just repeat the parameter’s name. Start the description with an initial
@@ -107,28 +108,31 @@ Parameter tables include the following columns:
 
 These tables do not need titles.
 
-Organize the parameters and label them as directed in the guidelines at
-https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/\
-m-z-style-guidelines.md#parameters.
+Organize the parameters and label them as directed in the `style guidelines`_.
 
-If there are no request body parameters, include the sentence "This operation
-does not accept a request body."
+If there are no request body parameters, include the following sentence:
+"This operation does not accept a request body."
+
+.. _style guidelines: https://github.com/rackerlabs/docs-rackspace/blob/master/
+   doc/style-guide/m-z-style-guidelines.md#parameters
 
 Request example
-^^^^^^^^^^^^^^^^^^^^
+---------------
 
 This section contains the code example with an introductory sentence, such as
-"The following example shows the JSON request for retrieving a list of flavors."
+"The following example shows the JSON request for retrieving a list of
+flavors."
 
 Specify the type of request, if applicable (such as JSON, HTTP, or cURL).
 
-In the example, include the HTTP request header and show the body (if there is a
-body).
+In the example, include the HTTP request header and show the body (if there
+is a body).
 
-Include as many examples as necessary, each preceded by an introductory sentence.
+Include as many examples as necessary, each preceded by an introductory
+sentence.
 
 Response parameters
-^^^^^^^^^^^^^^^^^^^^^^
+-------------------
 
 If you need to say something specific about the response, say it in this
 section, and then include a table for body parameters, as needed. Precede the
@@ -137,9 +141,9 @@ parameters."
 
 Parameter tables include the following columns:
 
-- **Name**: Show parameters in regular font, with no surrounding braces (for URI
-  placeholders). If it is a subparameter, show its parent parameter, too, and
-  bold the subparameter. For example, network.**name**.
+- **Name**: Show parameters in regular font, with no surrounding braces
+  (for URI placeholders). If it is a subparameter, show its parent parameter,
+  too, and bold the subparameter. For example, network.**name**.
 
 - **Type**: Use the full word, with initial an capital. For example: String,
   Boolean
@@ -154,36 +158,34 @@ Parameter tables include the following columns:
 
 These tables do not need titles.
 
-Organize the parameters and label them as directed in the guidelines at
-https://github.com/rackerlabs/docs-rackspace/blob/master/style-guide/\
-m-z-style-guidelines.md#parameters.
+Organize the parameters and label them as directed in the `style guidelines`_.
 
-If there are no response body parameters, include the sentence "This operation
-does not return a response body."
+If there are no response body parameters, include the following sentence:
+"This operation does not return a response body."
 
 Response example
-^^^^^^^^^^^^^^^^^^^
+----------------
 
 This section contains the code example with an introductory sentence, such as
 "The following example shows the JSON response for the request."
 
 Specify the type of response, if applicable (such as JSON, HTTP, or cURL).
 
-In the example, include the HTTP request header and show the body (if there is a
-body).
+In the example, include the HTTP request header and show the body (if there is
+a body).
 
-You can show multiple examples, by error code. Precede each with an introductory
-sentence.
+You can show multiple examples, by error code. Precede each with an
+introductory sentence.
 
 Response codes
-^^^^^^^^^^^^^^^^^
+--------------
 
-Provide a table with the possible response codes for the operation. Introduce it
-as follows: "This operation can have the following response codes."
+Provide a table with the possible response codes for the operation. Introduce
+it as follows: "This operation can have the following response codes."
 
 Response code tables include the following columns:
 
 - **Code**: Show the number, in regular font.
 - **Name**: Show the response code name, with title-style caps
-- **Description**: Use sentences. Use standard, common descriptions if they are
-  available (possibly through the use of substitution variables).
+- **Description**: Use sentences. Use standard, common descriptions if they
+  are available (possibly through the use of substitution variables).

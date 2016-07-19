@@ -1,18 +1,17 @@
 .. _update-an-image:
 
-Example http request topic - Update an image
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example HTTP request topic - Update an image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
     PATCH /v1.0/images/{imageId}
 
-This operation updates the specified image. You can update an image that you
-own.
+This operation updates the specified image. You can update only an image that
+you own.
 
 You can use the HTTP PATCH method to update certain standard properties, and to
-add, update, or remove custom, user-defined image properties. For more
-information, see HTTP PATCH method.
+add, update, or remove custom, user-defined image properties.
 
 Following are some guidelines for updating custom, user-defined properties.
 
@@ -48,7 +47,7 @@ Following are some guidelines for updating custom, user-defined properties.
   update some properties starting with ``org.openstack``.
 
 Request parameters
-^^^^^^^^^^^^^^^^^^^^^
+------------------
 
 The request has the following URI parameters.
 
@@ -90,7 +89,8 @@ The request body must conform to the
 ``application/openstack-images-v2.1-json-patch`` media type.
 
 Request example
-^^^^^^^^^^^^^^^^^^^
+---------------
+
 The following example updates two properties for the image: ``name`` and
 ``tags``.
 
@@ -108,7 +108,7 @@ The following example updates two properties for the image: ``name`` and
     ]
 
 Response parameters
-^^^^^^^^^^^^^^^^^^^^^
+-------------------
 
 The response conforms to the schema found in Get image schema.
 
@@ -129,7 +129,7 @@ The response has the following body parameters.
      - The name of the image.
    * - status
      - String
-     - The status of the image. For possible image statuses, see Image statuses.
+     - The status of the image.
    * - visibility
      - String
      - Specifies image visibility as ``public``, ``private``, or ``shared``.
@@ -156,7 +156,7 @@ The response has the following body parameters.
      - The schema of the image.
 
 Response example
-^^^^^^^^^^^^^^^^^
+----------------
 
 The following example shows the JSON response for retrieving the backup for a
 project.
@@ -177,7 +177,7 @@ project.
     }
 
 Response codes
-^^^^^^^^^^^^^^^^^
+--------------
 
 This operation can have the following response codes.
 

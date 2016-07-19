@@ -1,48 +1,49 @@
 .. _list-load-balancer-details:
 
-==============================
-Listing Load Balancer details
-==============================
+.. COMMENT: This topic is an example of a task that you might include in the
+   getting started portion of your API guide. Use gerunds for the titles of
+   these tasks, so that these titles don't conflict with titles in the API
+   reference section. Provide steps as necessary, and example data. 
 
-This operation provides detailed output for a specific load balancer
-configured and associated with your account. This operation is not
-capable of returning details for a load balancer which has been deleted.
+Retrieving load balancer details
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This operation does not require a request body.
+To retrieve details about a load balancer that is
+configured and associated with your account, use the retrieve load balancer
+details operation.
 
-The examples list the details for the load balancer (with
-**load\_balancer\_id**, which you will need to replace in the URL in the
-example below) that you created in the previous section.
+The following examples request the details for the load balancer that you
+created in the preceding section. The value from the ``load_balancer_id``
+field, ``5355``, is used in the URL in the examples.
 
-The following examples show the cURL requests for List Load Balancer
-Details:
+The following examples show the cURL requests to retrieve load balancer details.
 
-**Example: cURL List Load Balancer details request: XML**
+**Example: cURL retrieve load balancer details request: XML**
 
-.. code::  
+.. code::
 
     curl -s  \
     -H "X-Auth-Token: $AUTH_TOKEN"  \
     -H "X-Project-Id: $TENANT_ID" \
     -H "Accept: application/xml"  \
-    "$API_ENDPOINT/loadbalancers/load_balancer_id" | ppxml
+    "$API_ENDPOINT/loadbalancers/5355" | ppxml
 
-**Example: cURL List Load Balancer details request: JSON**
+**Example: cURL retrieve load balancer details request: JSON**
 
-.. code::  
+.. code::
 
     curl -s  \
     -H "X-Auth-Token: $AUTH_TOKEN"  \
     -H "X-Project-Id: $TENANT_ID" \
     -H "Accept: application/json"  \
-    "$API_ENDPOINT/loadbalancers/load_balancer_id" | python -m json.tool
+    "$API_ENDPOINT/loadbalancers/5355" | python -m json.tool
 
 
-The following examples show the List Load Balancer details responses:
+The following examples show the responses for retrieving load balancer details.
 
-**Example: List Load Balancer details response: XML**
+**Example: Retrieve load balancer details response: XML**
 
-.. code::  
+.. code::
 
     <loadBalancer xmlns="http://docs.openstack.org/loadbalancers/api/v1.0"
         id="5355"
@@ -79,9 +80,9 @@ The following examples show the List Load Balancer details responses:
         <sourceAddresses ipv4Servicenet="10.183.250.133" ipv4Public="174.143.139.133" ipv6Public="2001:4800:7901::2/64"/>
     </loadBalancer>
 
-**Example: List Load Balancer details response: JSON**
+**Example: Retrieve load balancer details response: JSON**
 
-.. code::  
+.. code::
 
     {
         "loadBalancer":{
