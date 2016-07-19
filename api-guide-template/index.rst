@@ -41,7 +41,7 @@ the |product name| service REST API:
    :maxdepth: 3
 
 
-   Product name v# <https://developer.rackspace.com/docs/cloud-load-balancers/v1/developer-guide/>
+   Product name v# <https://developer.rackspace.com/docs/{product-name}/{v#}/>
    getting-started/index
    general-api-info/index
    api-reference/index
