@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Rackspace Load Balancers documentation build configuration file, created by
+# Rackspace Developer documentation build configuration file, created by
 # sphinx-quickstart on Fri Jun 12 14:04:59 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -12,14 +12,23 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
-import os
-import shlex
+# import sys
+# import os
+
+try:
+    import sphinx_rtd_theme
+except ImportError:
+    sphinx_rtd_theme = None
+
+try:
+    from sphinxcontrib import spelling
+except:
+    spelling = None
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+# sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
 
@@ -37,6 +46,9 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.extlinks'
 ]
+
+if spelling is not None:
+    extensions.append('sphinxcontrib.spelling')
 
 # Add any paths that contain templates here, relative to this directory.
 #templates_path = ['_templates']
@@ -86,7 +98,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build','samples','api-reference/methods/*','common-gs',
-                    'getting-started/examples/*', 'release-notes/*']
+                    'getting-started/examples/*', 'release-notes/releases/*']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -137,7 +149,7 @@ rst_epilog = """
 .. |apiservice| replace:: Rackspace product API
 .. |no changes| replace:: None for this release
 .. |contract version| replace:: v#
-.. |product name| replace:: Rackspace product
+.. |product name| replace:: product
 """
 
 #Software release.version currently deployed in production.
@@ -157,7 +169,11 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
+if sphinx_rtd_theme:
+    html_theme = 'sphinx_rtd_theme'
+else:
+    html_theme = 'default'
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
