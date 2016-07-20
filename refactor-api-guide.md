@@ -1,8 +1,9 @@
 # Refactor API Guide Sphinx projects
 
 We're refactoring the API guides to take advantage of the collapsible
-navigation changes that Keith added to the templates, and remove obsolete
-headings.
+navigation updates that Keith added to the templates, remove obsolete
+headings, streamline the content architecture, and adopt 
+common content and boiler plate text revisions and additions.
 
 We're also changing the format to chunked content with **previous** and
 **next** links instead of a single html page.
@@ -15,7 +16,7 @@ Use the following projects as a model for refactoring:
 (https://github.com/rackerlabs/docs-cloud-load-balancers/tree/master/api-docs/cloud-load-balancers-v1)
 
 Use the [refactoring checklist issue]
-(https://github.com/rackerlabs/docs-migration/issues/109)
+(https://github.com/rackerlabs/docs-common/issues/68)
 to guide and track the refactoring work for
 each API guide. When you are ready to refactor a project, copy the
 checklist to a new issue in the API Guide git repository.
