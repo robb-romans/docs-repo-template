@@ -145,7 +145,6 @@ changes:
   Save the JSON data files in a directory, and run cURL commands from that
   directory.
 
->>>>>>> Stashed changes
 The following example shows the cURL format for Linux and UNIX systems:
 
 .. code::

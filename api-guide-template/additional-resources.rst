@@ -4,8 +4,8 @@
 Additional resources
 ====================
 
-We welcome feedback, comments, and bug reports. Visit the `Rackspace Product 
-Feedback forum <https://feedback.rackspace.com/>`_.
+We welcome feedback, comments, and bug reports. Visit the :rax-special:`Rackspace 
+Product Feedback forum <feedback>`.
 
 Use the following resources to learn more about the |product name| service and 
 API.
