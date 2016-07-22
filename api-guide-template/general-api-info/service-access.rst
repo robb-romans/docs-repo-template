@@ -10,14 +10,14 @@ Service access endpoints
 The |apiservice| service is a regionalized service. It allows the caller to
 select the region into which a load balancer is provisioned.
 
-The following table lists the Cloud Load Balancer endpoints that are available
+The following table lists the |product name| endpoints that are available
 for each region.
 
 .. tip::
    To help you decide which regionalized endpoint to use, read about
    :how-to:`special considerations for choosing a region <about-regions>`.
 
-.. _clb-dg-api-info-service-access-regional:
+.. _api-info-service-access-regional:
 
 .. list-table:: **Regionalized service endpoints**
     :widths: 10 40
