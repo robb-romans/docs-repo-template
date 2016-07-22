@@ -154,7 +154,7 @@ rst_epilog = """
 """
 
 # Software release.version currently deployed in production.
-release = 'v#.r#'
+release='v#.r#'
 
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
