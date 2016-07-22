@@ -12,10 +12,6 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
-import os
-import shlex
-
 try:
     import sphinx_rtd_theme
 except ImportError:
@@ -274,7 +270,7 @@ html_use_smartypants = True
 htmlhelp_basename = 'docs-cloud-productdoc'
 
 # this will change the 'paragraph' character to '#'
-# html_add_permalinks = '#'
+html_add_permalinks = '#'
 
 # -- Options for LaTeX output ---------------------------------------------
 
