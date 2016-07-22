@@ -3,6 +3,10 @@
 Install CLI clients
 ~~~~~~~~~~~~~~~~~~~
 
+.. COMMENT: Customize this topic per API service. If Rackspace CLI support is
+            available, then prefer people to use that. Otherwise, document the
+            CLI relevant to the service.
+
 .. important
 
    If people can use a command line interface (CLI) application to
