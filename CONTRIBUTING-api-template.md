@@ -1,8 +1,7 @@
-
 # Contributor guidelines
 
 These guidelines provide the general process for maintaining source code that
-builds the Rackspace {{product.name}} developer documentation.
+builds the Rackspace {{product-name}} developer documentation.
 
 - [Project description](#project-description)
 - [Updating and adding content](#updating-and-adding-content)
@@ -24,21 +23,22 @@ Source files for the Sphinx documentation project are in the ``api-docs``
 directory. Following are the key files that define project and content
 architecture:
 
+<!-- In this table, replace {{repo-name}} with the name of your repo. If you have multiple Sphinx doc projects in the same repo, replace {{folder-name}} with the name of the project folder. You'll also need to add information for both projects in this contributing document.  If you only have one project in the api-docs folder, delete {folder-name}/ from the source file URLs. -->
 
 Content | File
 --- | ---
 |Index page for the main content structure| [index.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/index.rst)
-|About the API index| [overview/index.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/overview/index.rst)
-|Getting Started introduction| [getting-started.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/getting-started.rst)
-|Getting Started index|[getting-started/index.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/getting-started/index.rst)
-|Developer Guide introduction|[developer-guide.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/developer-guide.rst)
-|Concepts section| [concepts.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/concepts.rst)
-|General API information index|[general-api-info/index.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/general-api-info/index.rst)
-|API Reference introduction|[api-reference.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/api-reference.rst)
-|API Reference index|[api-operations/index.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/api-operations/index.rst)
-|API operations methods, including code samples|[api-operations/methods](https://github.com/rackerlabs/{{repo.name}}/tree/master/api-docs/cloud-load-balancers-v1/api-operations/methods)
-|Release notes|[release-notes.rst](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/release-notes.rst)
-|Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/{{repo.name}}/blob/master/api-docs/cloud-load-balancers-v1/conf.py) (Typically, this file does not require changes.)
+|About the API index| [overview/index.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/cloud-load-balancers-v1/overview/index.rst)
+|Getting Started introduction| [getting-started.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/getting-started.rst)
+|Getting Started index|[getting-started/index.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/getting-started/index.rst)
+|Developer Guide introduction|[developer-guide.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/developer-guide.rst)
+|Concepts section| [concepts.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/concepts.rst)
+|General API information index|[general-api-info/index.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/general-api-info/index.rst)
+|API Reference introduction|[api-reference.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/api-reference.rst)
+|API Reference index|[api-operations/index.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/api-reference/index.rst)
+|API operations methods, including code samples|[api-operations/methods](https://github.com/rackerlabs/{{repo-name}}/tree/master/api-docs/{{folder-name}}/api-reference/methods)
+|Release notes|[release-notes.rst](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/release-notes.rst)
+|Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/{{repo-name}}/blob/master/api-docs/{{folder-name}}/conf.py) (For new projects, replace the following values in the conf.py with values for your API project: ``product``= name of the API service, ``v#``= contract version, ``v#.r#``= ``release number``)
 |Linux and OS X build script|``Makefile``|
 |Windows build script|``make.bat``|
 
