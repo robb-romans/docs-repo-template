@@ -59,9 +59,11 @@ If the PR has merge conflicts, resolve them by rebasing your branch against
 upstream master and committing the branch updates to your forked repo.
 
 ## Review
-Work with a partner to verify that your refactored content follows the [API
-Guide template content
-architecture](https://staging.developer.rackspace.com/staging.horse/build-71df1756f4/docs/api-doc-template/)
+
+Copy the [QE checklist](https://github.com/rackerlabs/docs-common/issues/81) to a new issue
+in the API documentation source repo. Have another writer use the checklist to verify that
+the refactored content follows the [API
+Guide template](https://staging.developer.rackspace.com/staging.horse/build-71df1756f4/docs/api-doc-template/)
 and renders correctly.
 
 When the content looks OK, add the *Ready* label to the PR, but don't merge the
