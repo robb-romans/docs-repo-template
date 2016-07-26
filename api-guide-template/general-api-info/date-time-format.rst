@@ -11,7 +11,7 @@ The service uses an ISO 8601 compliant date format for the
 display and consumption of date and time values. The system time is
 expressed as UTC.
 
-.. _clb-dg-datetime-loadbalance:
+.. _datetime-loadbalance:
 
 **Service date and time format**
 
@@ -28,7 +28,7 @@ UCT-5 format:
 
 The following table describes the date and time format codes.
 
-.. _clb-dg-datetime-codes:
+.. _datetime-codes:
 
 .. list-table:: **Date and time format codes**
    :widths: 20 50

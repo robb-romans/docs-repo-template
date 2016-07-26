@@ -13,7 +13,7 @@ same port.  This section provides information about the compatible load balancer
 protocols that are  designed to share UDP and TCP based protocols on the same
 port.
 
-.. _clb-dg-compatible-dns:
+.. _compatible-dns:
 
 DNS-compatible load balancing protocols
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,7 +43,7 @@ sharing TCP- and UDP-based protocols on the same port. These protocols can be
 interchanged to achieve the proper setup for your TCP- and UDP-based
 application.
 
-.. _clb-dg-compatible-tcp:
+.. _compatible-tcp:
 
 .. list-table:: **TCP-compatible protocols**
    :widths: 20 50
@@ -62,7 +62,7 @@ application.
      - This protocol is similar to TCP, but is more efficient when a client
        is expected to write the data first.
 
-.. _clb-dg-compatible-udp:
+.. _compatible-udp:
 
 .. list-table:: **UDP-compatible protocols**
    :widths: 20 50

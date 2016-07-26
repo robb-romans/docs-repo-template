@@ -9,9 +9,9 @@ Limits
 
 All accounts, by default, have a preconfigured set of thresholds, or *limits*,
 to manage capacity and prevent abuse of the system. The system recognizes two
-kinds of limits: *rate limits* and *absolute limits*. Rate limits are thresholds
-that are reset after a certain amount of time passes. Absolute limits are fixed.
-Rate limits are processed via the `Repose service`_.
+kinds of limits: *rate limits* and *absolute limits*. Rate limits are
+thresholds that are reset after a certain amount of time passes. Absolute
+limits are fixed. Rate limits are processed via the `Repose service`_.
 
 .. note::
 
@@ -21,20 +21,20 @@ Rate limits are processed via the `Repose service`_.
 
 .. _Repose service: http://www.openrepose.org
 
-.. _clb-dg-api-info-limits-ratelimits:
+.. _api-info-limits-ratelimits:
 
 Rate limits
 ~~~~~~~~~~~
 
 Rate limits are specified in terms of both a human-readable wildcard URI and a
-machine-processable regular expression. The regular expression boundary matcher
-``^`` takes effect after the root URI path. For example, the regular expression
-``^/v1.0/1234/loadbalancers`` would match the ``/v1.0/1234/loadbalancers``
-portion  of the following URI:
+machine-processable regular expression. The regular expression boundary
+matcher ``^`` takes effect after the root URI path. For example, the regular
+expression ``^/v1.0/1234/loadbalancers`` would match the
+``/v1.0/1234/loadbalancers`` portion  of the following URI:
 
 ``https://ord.loadbalancers.api.rackspacecloud.com/v1.0/1234/loadbalancers``
 
-.. _clb-dg-api-info-limits-ratelimits-default:
+.. _api-info-limits-ratelimits-default:
 
 .. list-table:: **Default rate limits**
    :widths: 20 40 10 20
@@ -79,15 +79,17 @@ portion  of the following URI:
 
 Rate limits are applied in order relative to the method, going from least to
 most specific. For example, although the threshold for **POST** requests to
-``/v1.0/*``  is 25 per minute, you cannot send a **POST** request to ``/v1.0/*``
-more than 2  times per second because the rate limit for any **POST** request
-is 2 per second.  If you exceed the limits established for your account, a
-``413 (Rate Control)`` HTTP  response is returned with a ``Retry-After`` header
-to notify the client when it can  attempt to try again.
+``/v1.0/*``  is 25 per minute, you cannot send a **POST** request to
+``/v1.0/*`` more than 2  times per second because the rate limit for any
+**POST** request is 2 per second.  If you exceed the limits established for
+your account, a ``413 (Rate Control)`` HTTP  response is returned with a
+``Retry-After`` header to notify the client when it can  attempt to try
+again.
 
 You can submit a request to Rackspace Support for an increase in load balancer
-limits. Each request must be approved before limits can be modified. Limits can
-be increased only up to the maximum limit (such as 50 nodes per load balancer).
+limits. Each request must be approved before limits can be modified. Limits
+can be increased only up to the maximum limit (such as 50 nodes per load
+balancer).
 
 To find your current account settings for these limits, see
 :ref:`Retrieve account limits <determine-limits>`.
