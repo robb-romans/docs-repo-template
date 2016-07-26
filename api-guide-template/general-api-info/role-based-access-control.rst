@@ -22,11 +22,12 @@ example, |product name|), to account users.
 Assigning roles to account users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The account owner (identity:user-admin) can create account users on the account
-and then assign roles to those users. The roles grant the account users specific
-permissions for accessing the capabilities of the |product name| service.
-Each account has only one account owner, and that role is assigned by default to
-any Rackspace Cloud account when the account is created.
+The account owner (identity:user-admin) can create account users on the
+account and then assign roles to those users. The roles grant the account
+users specific permissions for accessing the capabilities of the
+|product name| service. Each account has only one account owner, and that role
+is assigned by default to any Rackspace Cloud account when the account is
+created.
 
 See the Cloud Identity API guide for information about how to
 perform the following tasks:
@@ -101,9 +102,9 @@ Resolving conflicts between RBAC multiproduct and product-specific roles
 The account owner can set roles for both multiproduct and |product name|
 scope, and it is important to understand how any potential conflicts between
 these roles are resolved. When two roles appear to conflict, the role that
-provides the more extensive permissions takes precedence. Therefore, admin roles
-take precedence over observer and creator roles, because admin roles provide
-more permissions.
+provides the more extensive permissions takes precedence. Therefore, admin
+roles take precedence over observer and creator roles, because admin roles
+provide more permissions.
 
 The following table shows two examples of how potential conflicts between user
 roles in the Control Panel are resolved.

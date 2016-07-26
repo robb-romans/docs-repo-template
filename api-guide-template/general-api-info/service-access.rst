@@ -44,9 +44,10 @@ that is returned as part of the authentication response. The account number is
 located  after the  final slash (/) in the ``publicURL`` field.
 
 The service catalog returned in the authentication response specifies the
-correct service access endpoint for your account to use for accessing Cloud Load
-Balancers. Use the service type (``rax:load-balancer``) to locate the correct
-endpoint in the service catalog. For an example of the service catalog, see
+correct service access endpoint for your account to use for accessing
+|product name|. Use the service type (``rax:load-balancer``) to locate the
+correct endpoint in the service catalog. For an example of the service
+catalog, see
 :ref:`authentication response examples <authentication-response-examples>`.
 
 - If you are load balancing **cloud servers**, you can determine the
