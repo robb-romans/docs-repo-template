@@ -67,3 +67,11 @@ and renders correctly.
 When the content looks OK, add the *Ready* label to the PR, but don't merge the
 content yet. We have to make changes to the nexus-control configuration and
 docs landing page before merging the changes.
+
+## Publish and deploy updates
+
+After refactoring the API Guide, update the nexus-control configuration and the landing page to map
+the refactored content and update the links on the developer.rackspace.com docs landing page. For details, 
+see [issue #79](https://github.com/rackerlabs/docs-common/issues/79).
+
+
