@@ -34,7 +34,7 @@ authentication request to get a new one.
        reference in the Rackspace Cloud Identity API documentation describes
        other types of credentials that you can use for authentication.
 
-     - :rax-devdocs:`Manage authentication tokens <cloud-identity/
-       v2/developer-guide/#manage-authentication-tokens>`
+     - :rax-devdocs:`Manage authentication tokens
+       <cloud-identity/v2/developer-guide/#manage-authentication-tokens>`
 
 .. include:: ../common-gs/auth-using-curl.rst

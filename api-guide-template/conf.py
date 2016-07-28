@@ -124,7 +124,6 @@ extlinks = {
     'rax-cloud': ('http://www.rackspace.com/cloud/%s', ''),
     'rax-dev': ('https://developer.rackspace.com/%s', ''),
     'rax-devdocs': ('http://developer.rackspace.com/docs/%s', ''),
-    'rax-devguide': ('http:/developer.rackspace.com/docs/%s', ''),
     'rax-api':
     ('http:/developer.rackspace.com/docs/%s/api-reference', ''),
     'rax-git': ('https://github.com/rackspace/%s', ''),
