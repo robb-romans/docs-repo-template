@@ -1,9 +1,0 @@
-.. Provide a product-specific introduction as needed. The following example provides a product-specific introduction to Cloud Servers v2. 
-..
-.. If no introduction is needed:
-..
-.. 1. Remove this file from your doc repo.
-.. 
-.. 2. Delete the ``.. include::`` directive for it from your repo's `overview.txt`.
-
-Next generation Cloud Servers powered by OpenStack is a fast, reliable, and scalable cloud compute solution without the risk of proprietary lock-in. It provides the core features of the OpenStack Compute API v2 and also deploys certain extensions as permitted by the OpenStack Compute API contract. Some of these extensions are generally available through OpenStack while others implement Rackspace-specific features to meet customers’ expectations and for operational compatibility. The OpenStack Compute API and the Rackspace extensions are known collectively as API v2.
