@@ -1,5 +1,7 @@
 # GitHub workflow :octocat:
 
+**Note::** To use this template, view source and replace {{repo.name}} with the value for your API documentation project.
+
 To contribute content to this repository (repo), use the GitHub workflow described here.
 To follow the entire contribution process, go to
 [CONTRIBUTING.md](CONTRIBUTING.md).
