@@ -1,5 +1,7 @@
 # Rackspace Cloud {{product.name}} API documentation
 
+**Note:** To update this template, view source and replace {{product.name}} with the GitHub repository name for your API documentation.
+
 [![build badge](https://build.developer.rackspace.com/rackerlabs/{{product.name}}/badge?branch=master)](https://build.developer.rackspace.com/rackerlabs/docs-cloud-load-balancers/)
 
 This repository contains the source files that generate the following
