@@ -1,5 +1,7 @@
 # Contributor guidelines
 
+**Note::** To use this template, view source and replace product name and repo name with the values for your documentation.
+
 These guidelines provide the general process for maintaining source code that
 builds the Rackspace {{product-name}} developer documentation.
 
