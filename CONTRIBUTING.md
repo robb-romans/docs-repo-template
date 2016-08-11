@@ -1,6 +1,15 @@
 # Contributor guidelines
 
-**Note::** To use this template, view source and replace product name and repo name with the values for your documentation.
+**Note::** 
+   To use this template, view source and make the following updates or replacements:
+   
+   - Replace ``{{repo.name}}`` with the name you assigned to the repo.
+   - Replace or delete {{folder.name}}
+   
+     The ``{{folder.name}}`` variable appears in links to the content files in the repo. If your repo contains more than one Sphinx project, for example content for v1 and v2 of an API, the content goes in separate folders inside the api-docs folder. In this case, update the folder.name to point to the current version. If you only have one version, delete the following pattern ``{{folder.name}}\``.  If the repo has more than one version, link to the current version, and add a 
+     note to the project description guide that points to the folder for the older version. If one of the versions, is in beta or early release, indicate that in the note.
+
+
 
 These guidelines provide the general process for maintaining source code that
 builds the Rackspace {{product-name}} developer documentation.
