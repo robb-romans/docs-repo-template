@@ -34,7 +34,7 @@ Source files for the Sphinx documentation project are in the ``api-docs``
 directory. Following are the key files that define project and content
 architecture:
 
-**Note::** Fon new projects, update the source for this table with the information for your project. Replace {{repo-name}} with the name of your repo. If you have multiple Sphinx doc projects in the same repo, replace {{folder-name}} with the name of the project folder. You'll also need to add information for both projects in this contributing document.  If you only have one project in the ``api-docs`` folder, remove {{folder-name}}/ from the source file target URL.
+**Note:** Fon new projects, update the source for this table with the information for your project. Replace {{repo-name}} with the name of your repo. If you have multiple Sphinx doc projects in the same repo, replace {{folder-name}} with the name of the project folder. You'll also need to add information for both projects in this contributing document.  If you only have one project in the ``api-docs`` folder, remove {{folder-name}}/ from the source file target URL.
 
 Content | File
 --- | ---
