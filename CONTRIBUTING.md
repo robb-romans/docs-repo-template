@@ -1,6 +1,6 @@
 # Contributor guidelines
 
-**Note::** 
+**Note:** 
    To use this template, view source and make the following updates or replacements:
    
    - Replace ``{{repo.name}}`` with the name you assigned to the repo.
@@ -20,7 +20,7 @@ builds the Rackspace {{product-name}} developer documentation.
 - [Submitting your content](#submitting-changes)
 - [Previewing changes](#previewing-changes)
 
-##Project description
+## Project description
 <!-- Provide as little or as much information about architecture as needed to help
 contributors figure out which file to update.-->
 
