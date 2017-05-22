@@ -1,8 +1,8 @@
 .. _index-getting-started-xxx-ug:
 
-===================================
+===============
 Getting started
-===================================
+===============
 
 .. Define |product name| in conf.py
 

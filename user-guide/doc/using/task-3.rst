@@ -1,8 +1,8 @@
 .. _task-3-xxx-ug:
 
-========================
+======
 Task 3
-========================
+======
 
 Provide any concepts or context necessary to understand the task.
 
