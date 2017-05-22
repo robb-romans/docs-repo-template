@@ -1,4 +1,4 @@
-.._api-xxx-ug:
+.. _api-xxx-ug:
 
 ===
 API
