@@ -1,8 +1,8 @@
 .. _task-2-xxx-ug:
 
-========================
+======
 Task 2
-========================
+======
 
 Should we provide a naming convention in each task topic? Something like:
 Task titles should be gerunds (for example: Adding a user).

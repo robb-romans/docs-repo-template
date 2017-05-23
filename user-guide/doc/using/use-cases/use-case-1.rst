@@ -1,8 +1,8 @@
 .. _use-case-1-xxx-ug:
 
-========================
+==========
 Use case 1
-========================
+==========
 
 Provide any concepts or context necessary to understand the use-case.
 
@@ -33,7 +33,7 @@ to existing tasks (see step 2).
 
       Sample warning code. Use when...
 
-#. :ref:`Add a user<../using/task-3>`.
+#. :ref:`Add a user<task-3-xxx-ug>`.
 
    .. code::
 
@@ -48,4 +48,4 @@ Next steps
 
 Provide links to any tasks that must/can be completed after this task.
 
-:ref:`../using/task-4-xxx-ug`.
+:ref:`task-4-xxx-ug`.

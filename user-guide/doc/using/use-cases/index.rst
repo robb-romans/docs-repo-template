@@ -1,8 +1,8 @@
 .. _index-use-cases-xxx-ug:
 
-===================================
+==========
 Uses cases
-===================================
+==========
 
 .. Define |product name| in conf.py
 

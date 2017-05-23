@@ -1,8 +1,8 @@
 .. _use-case-2-xxx-ug:
 
-========================
+==========
 Use case 2
-========================
+==========
 
 Provide any concepts or context necessary to understand the task.
 

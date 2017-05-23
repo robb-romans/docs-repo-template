@@ -25,7 +25,7 @@ description or benefit of the product].
    getting-started/index.rst
    using/index.rst
    api.rst
-   patching-upgrading.rst
+   administering/index.rst
    reference/index.rst
    additional-resources.rst
    common/common-end.rst
