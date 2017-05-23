@@ -1,8 +1,8 @@
 .. _index-administering:
 
-===================================
+=============
 Administering
-===================================
+=============
 
 .. Define |product name| in conf.py
 

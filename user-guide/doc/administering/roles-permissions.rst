@@ -4,6 +4,8 @@
 Roles and permissions
 =====================
 
+.. Define |product name| in conf.py
+
 Provide an introductory paragraph, then describe the roles and permissions that
 are available for customers. Use tables as needed to make the connections
 between roles and permissions clear. The following sections and tables provide
