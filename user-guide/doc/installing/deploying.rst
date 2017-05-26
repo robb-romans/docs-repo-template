@@ -10,3 +10,6 @@ if relevant.
 
 Verification of installation success or trial operation is documented
 in the ``verifying.rst`` file.
+
+
+[Need examples here]

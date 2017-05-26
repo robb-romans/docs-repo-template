@@ -1,18 +1,17 @@
 .. _installation-xxx-ug:
 
-============
-Installation
-============
+==========
+Installing
+==========
 
 This section describes the process for installing |product name|.
 
-Describe the audience for the installation process (e.g. end user,
-Rackspace Support, DCOps, etc.)
+Describe the audience for the installation process (for example, end
+user, Rackspace Support, DCOps.)
 
 .. toctree::
    :maxdepth: 2
 
-   prerequisites.rst
    planning.rst
    deploying.rst
    verifying.rst

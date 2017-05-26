@@ -1,10 +1,12 @@
 .. _overview-xxx-ug:
 
-========
-Overview
-========
+================
+Product overview
+================
 
-Provide introductory text.
+This section describes the features, architecture, and components of
+|product name|.
+
 
 .. toctree::
    :maxdepth: 2
@@ -12,3 +14,4 @@ Provide introductory text.
    features.rst
    architecture.rst
    components.rst
+   system-requirements.rst
