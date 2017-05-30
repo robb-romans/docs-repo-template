@@ -12,6 +12,5 @@ This section provides support information for the |product name| product.
    :maxdepth: 1
 
    spheres-support.rst
-   managed-services.rst
    licensing.rst
    compatibility.rst
