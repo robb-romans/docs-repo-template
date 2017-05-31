@@ -13,4 +13,3 @@ This section provides support information for the |product name| product.
 
    spheres-support.rst
    licensing.rst
-   compatibility.rst

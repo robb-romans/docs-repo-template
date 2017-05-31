@@ -15,3 +15,4 @@ This section describes the features, architecture, and components of
    architecture.rst
    components.rst
    system-requirements.rst
+   compatibility.rst
