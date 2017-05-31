@@ -1,4 +1,4 @@
-.. _use case-template-xxx-ug:
+.. _use-case-template-xxx-ug:
 
 =================
 Use case template

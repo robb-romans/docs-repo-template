@@ -1,4 +1,4 @@
-.. _index-use cases-xxx-ug:
+.. _index-use-cases-xxx-ug:
 
 ==========
 Uses cases
@@ -18,4 +18,4 @@ This section provides information about using cases for the
 .. toctree::
    :maxdepth: 1
 
-   use case-template.rst
+   use-case-template.rst

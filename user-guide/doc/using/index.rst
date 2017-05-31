@@ -18,5 +18,5 @@ This section provides information about using the
 .. toctree::
    :maxdepth: 1
 
-   use cases/index.rst
+   use-cases/index.rst
    task-template.rst
