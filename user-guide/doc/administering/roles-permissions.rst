@@ -12,7 +12,7 @@ between roles and permissions clear. The following sections and tables provide
 an example.
 
 Roles
-~~~~~~~~~~~~~~~~
+~~~~~
 
 Predefined roles and the rights that they contain are available in all
 organizations. All of the roles in the following table are available

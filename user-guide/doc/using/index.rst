@@ -6,8 +6,11 @@ Using
 
 .. Define |product name| in conf.py
 
-Include tasks that can be completed using the product.
+Include tasks that can be completed using the product. Create as many task as
+necessary using the task template. Tasks can be organized by categories.
 
+Tasks in the Using section are generally end-user tasks. Tasks completed
+by an administrator (maintenance tasks) go in the Administering section.
 
 This section provides information about using the
 |product name| product.
@@ -16,5 +19,4 @@ This section provides information about using the
    :maxdepth: 1
 
    use-cases/index.rst
-   task-3.rst
-   task-4.rst
+   task-template.rst
