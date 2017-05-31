@@ -4,7 +4,7 @@
 Task template
 =============
 
-Name tasks with the imperative (for example, Add a user).
+Begin the title of tasks with an imperative verb (for example, Add a user).
 
 Provide any concepts or context necessary to understand the task. Include
 graphics if necessary.
@@ -30,4 +30,4 @@ Result of completing the task.
 Next steps
 ~~~~~~~~~~
 
-Provide links to any tasks that must/can be completed after this task.
+Provide links to any tasks that must or can be completed after this task.
