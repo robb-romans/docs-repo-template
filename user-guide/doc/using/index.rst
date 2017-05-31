@@ -6,7 +6,7 @@ Using
 
 .. Define |product name| in conf.py
 
-Include tasks that can be completed using the product. Create as many task as
+Include tasks that can be completed using the product. Create as many tasks as
 necessary using the task template. Tasks can be organized by categories.
 
 Tasks in the Using section are generally end-user tasks. Tasks completed
@@ -18,5 +18,5 @@ This section provides information about using the
 .. toctree::
    :maxdepth: 1
 
-   use-cases/index.rst
+   use cases/index.rst
    task-template.rst

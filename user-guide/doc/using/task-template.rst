@@ -4,7 +4,7 @@
 Task template
 =============
 
-Name tasks with a gerund (for example, Adding a user).
+Name tasks with the imperative (for example, Add a user).
 
 Provide any concepts or context necessary to understand the task. Include
 graphics if necessary.
